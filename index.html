@@ -755,6 +755,46 @@
         }
 
         /* ==============================
+   HERO RESPONSIVE
+============================== */
+
+        @media (max-width: 1140px) {
+            .hero-copy {
+                left: 60px;
+                right: 60px;
+                bottom: 120px;
+            }
+            .hero-nav {
+                left: 20px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .hero-copy {
+                left: 24px;
+                right: 24px;
+                bottom: 100px;
+            }
+            .h-title-main {
+                font-size: clamp(3.5rem, 16vw, 4.8rem);
+            }
+            .hero-nav {
+                display: none;
+            }
+            .hero-dots {
+                bottom: 30px;
+                right: 24px;
+            }
+            .hero-scroll {
+                display: none;
+            }
+            .hero-counter {
+                left: 24px;
+                bottom: 30px;
+            }
+        }
+
+        /* ==============================
    SERVICES SECTION
 ============================== */
 
@@ -1490,7 +1530,7 @@
         @media (max-width: 1140px) {
             .svc-content {
                 grid-template-columns: 1fr;
-                padding: 72px 44px 64px;
+                padding: 72px 44px 160px;
                 min-height: auto;
                 gap: 44px;
             }
@@ -1503,11 +1543,16 @@
             .svc-right {
                 order: 2;
                 height: 430px;
+                align-items: flex-start;
+                position: relative;
+                width: 100%;
             }
 
             .honeycomb {
-                transform: scale(0.80);
-                transform-origin: center top;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%) scale(0.80);
+                transform-origin: top center;
             }
 
             .svc-overlay {
@@ -1516,11 +1561,18 @@
                         rgba(3, 7, 24, 0.70) 45%,
                         rgba(3, 7, 24, 0.85) 100%);
             }
+
+            .svc-wordmark {
+                right: 50%;
+                transform: translateX(50%);
+                bottom: 40px;
+                opacity: 0.6;
+            }
         }
 
         @media (max-width: 700px) {
             .svc-content {
-                padding: 56px 22px 52px;
+                padding: 56px 22px 140px;
                 gap: 26px;
             }
 
@@ -1529,19 +1581,38 @@
             }
 
             .honeycomb {
-                transform: scale(0.56);
-                transform-origin: center top;
+                transform: translateX(-50%) scale(0.56);
+                transform-origin: top center;
+            }
+
+            .svc-wordmark {
+                bottom: 24px;
+                width: 100%;
+                justify-content: center;
+                opacity: 0.4;
+            }
+
+            .svc-wordmark img {
+                height: clamp(50px, 10vh, 90px);
             }
         }
 
         @media (max-width: 460px) {
+            .svc-content {
+                padding-bottom: 120px;
+            }
+
             .svc-right {
                 height: 250px;
             }
 
             .honeycomb {
-                transform: scale(0.46);
-                transform-origin: center top;
+                transform: translateX(-50%) scale(0.46);
+                transform-origin: top center;
+            }
+
+            .svc-wordmark img {
+                height: clamp(40px, 8vh, 70px);
             }
         }
 
@@ -1551,8 +1622,8 @@
             }
 
             .honeycomb {
-                transform: scale(0.40);
-                transform-origin: center top;
+                transform: translateX(-50%) scale(0.40);
+                transform-origin: top center;
             }
         }
 
@@ -3617,7 +3688,7 @@
 <body>
 
     <!-- //Sticky Logo Button// -->
-    <a class="sticky-logo-btn" id="stickyLogo" href="#heroSection" onclick="event.preventDefault(); document.getElementById('heroSection').scrollIntoView({behavior:'smooth'});" aria-label="Return to Home">
+    <a class="sticky-logo-btn" id="stickyLogo" href="index.html" aria-label="Return to Home">
         <img src="sj-logo.png" alt="Schröder's Joinery Logo">
     </a>
 
