@@ -433,6 +433,378 @@
             animation-delay: 1.07s;
         }
 
+        .hero-social-rail {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            z-index: 11;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 18px;
+            transform: translateY(-50%);
+            animation: socialRailEntry 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.95s both;
+        }
+
+        @keyframes socialRailEntry {
+            from {
+                opacity: 0;
+                transform: translate(18px, -50%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(0, -50%);
+            }
+        }
+
+        .hero-social-tab {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 58px;
+            width: 24px;
+            color: #ffffff;
+            text-decoration: none;
+            clip-path: polygon(10px 0, 100% 0, 100% 100%, 10px 100%, 0 calc(100% - 10px), 0 10px);
+            border-radius: 0;
+            background: linear-gradient(180deg, rgba(116, 122, 130, 0.78), rgba(90, 96, 104, 0.88));
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
+            opacity: 0.76;
+            filter: saturate(0.48) brightness(0.84);
+            transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.28s ease,
+                box-shadow 0.34s ease,
+                filter 0.34s ease;
+            overflow: visible;
+        }
+
+        .hero-social-tab::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--social-hover);
+            opacity: 0;
+            transition: opacity 0.34s ease;
+            z-index: 0;
+        }
+
+        .hero-social-tab::after {
+            content: '';
+            position: absolute;
+            inset: 1px 0 1px 1px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0) 54%);
+            pointer-events: none;
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        .hero-social-tab:hover,
+        .hero-social-tab:focus-visible {
+            transform: translateX(-4px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+            opacity: 1;
+            filter: saturate(1) brightness(1.03);
+        }
+
+        .hero-social-tab:hover::before,
+        .hero-social-tab:focus-visible::before {
+            opacity: 1;
+        }
+
+        .hero-social-tab:focus-visible {
+            outline: 2px solid rgba(255, 255, 255, 0.82);
+            outline-offset: 4px;
+        }
+
+        .hero-social-tab svg {
+            width: 13px;
+            height: 13px;
+            fill: currentColor;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-social-tab.is-facebook {
+            --social-hover: #1877F2;
+        }
+
+        .hero-social-tab.is-facebook svg {
+            width: 12px;
+            height: 12px;
+        }
+
+        .hero-social-tab.is-instagram {
+            --social-hover: linear-gradient(135deg,
+                    #F58529 0%,
+                    #FEDA77 20%,
+                    #DD2A7B 52%,
+                    #8134AF 76%,
+                    #515BD4 100%);
+        }
+
+        .hero-social-tab.is-instagram svg {
+            width: 11px;
+            height: 11px;
+        }
+
+        .hero-social-tab.is-linkedin {
+            --social-hover: #0A66C2;
+        }
+
+        .hero-social-tab.is-linkedin svg {
+            width: 10.5px;
+            height: 10.5px;
+        }
+
+        .hero-mobile-toggle,
+        .hero-mobile-nav {
+            display: none;
+        }
+
+        body.mobile-nav-open {
+            overflow: hidden;
+        }
+
+        .hero-mobile-toggle {
+            position: fixed;
+            top: 34px;
+            left: 24px;
+            z-index: 10001;
+            width: 36px;
+            height: 28px;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+            color: var(--white);
+            opacity: 0.84;
+            -webkit-tap-highlight-color: transparent;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .hero-mobile-toggle:hover {
+            opacity: 1;
+            transform: translateY(-1px);
+        }
+
+        .hero-mobile-toggle:focus-visible,
+        .hero-mobile-link:focus-visible,
+        .hero-mobile-nav-backdrop:focus-visible {
+            outline: 2px solid rgba(255, 255, 255, 0.74);
+            outline-offset: 4px;
+        }
+
+        .hero-mobile-toggle-core {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-mobile-toggle-core::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            bottom: 2px;
+            width: 1px;
+            background: rgba(255, 255, 255, 0.24);
+            opacity: 0;
+            transform: scaleY(0.35);
+            transform-origin: top center;
+            transition: opacity 0.24s ease, transform 0.34s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .hero-mobile-line {
+            position: absolute;
+            left: 8px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.9);
+            transform-origin: left center;
+            transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+                width 0.34s ease,
+                opacity 0.22s ease;
+        }
+
+        .hero-mobile-line-top {
+            top: 3px;
+            width: 28px;
+        }
+
+        .hero-mobile-line-mid {
+            top: 13px;
+            width: 16px;
+        }
+
+        .hero-mobile-line-bot {
+            top: 23px;
+            width: 22px;
+        }
+
+        .hero-mobile-toggle[aria-expanded="true"] .hero-mobile-toggle-core::before {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+
+        .hero-mobile-toggle[aria-expanded="true"] .hero-mobile-line-top {
+            width: 28px;
+            transform: translateY(10px) rotate(38deg);
+        }
+
+        .hero-mobile-toggle[aria-expanded="true"] .hero-mobile-line-mid {
+            opacity: 0;
+            transform: translateX(-8px);
+        }
+
+        .hero-mobile-toggle[aria-expanded="true"] .hero-mobile-line-bot {
+            width: 28px;
+            transform: translateY(-10px) rotate(-38deg);
+        }
+
+        .hero-mobile-nav[hidden] {
+            display: none !important;
+        }
+
+        .hero-mobile-nav {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            pointer-events: none;
+        }
+
+        .hero-mobile-nav-backdrop {
+            position: absolute;
+            inset: 0;
+            border: 0;
+            background: linear-gradient(90deg,
+                    rgba(3, 7, 18, 0.88) 0%,
+                    rgba(3, 7, 18, 0.62) 28%,
+                    rgba(3, 7, 18, 0.18) 54%,
+                    rgba(3, 7, 18, 0) 76%);
+            opacity: 0;
+            cursor: pointer;
+            transition: opacity 0.28s ease;
+        }
+
+        .hero-mobile-nav-panel {
+            position: fixed;
+            top: 96px;
+            left: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            padding-left: 18px;
+            max-width: calc(100vw - 48px);
+            transform: translateX(-18px);
+            opacity: 0;
+            transition: transform 0.36s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.24s ease;
+        }
+
+        .hero-mobile-nav-panel::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            bottom: 2px;
+            width: 1px;
+            background: linear-gradient(to bottom,
+                    rgba(212, 175, 55, 0.72) 0%,
+                    rgba(212, 175, 55, 0.24) 62%,
+                    transparent 100%);
+        }
+
+        .hero-mobile-nav.is-open {
+            pointer-events: auto;
+        }
+
+        .hero-mobile-nav.is-open .hero-mobile-nav-backdrop {
+            opacity: 1;
+        }
+
+        .hero-mobile-nav.is-open .hero-mobile-nav-panel {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .hero-mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .hero-mobile-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            width: fit-content;
+            text-decoration: none;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: opacity 0.22s ease,
+                transform 0.36s cubic-bezier(0.22, 1, 0.36, 1),
+                color 0.32s ease;
+        }
+
+        .hero-mobile-link::before {
+            content: '';
+            display: block;
+            width: 18px;
+            height: 1px;
+            background: rgba(212, 175, 55, 0.50);
+            flex-shrink: 0;
+            transition: width 0.36s ease, background 0.36s ease;
+        }
+
+        .hero-mobile-link span {
+            font-family: 'Jost', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.52);
+            white-space: nowrap;
+            transition: color 0.32s ease, letter-spacing 0.36s ease;
+        }
+
+        .hero-mobile-nav.is-open .hero-mobile-link {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .hero-mobile-nav.is-open .hero-mobile-link:nth-child(1) {
+            transition-delay: 0.03s;
+        }
+
+        .hero-mobile-nav.is-open .hero-mobile-link:nth-child(2) {
+            transition-delay: 0.08s;
+        }
+
+        .hero-mobile-nav.is-open .hero-mobile-link:nth-child(3) {
+            transition-delay: 0.13s;
+        }
+
+        .hero-mobile-nav.is-open .hero-mobile-link:nth-child(4) {
+            transition-delay: 0.18s;
+        }
+
+        .hero-mobile-nav.is-open .hero-mobile-link:nth-child(5) {
+            transition-delay: 0.23s;
+        }
+
+        .hero-mobile-link:hover::before,
+        .hero-mobile-link:focus-visible::before {
+            width: 30px;
+            background: #D4AF37;
+        }
+
+        .hero-mobile-link:hover span,
+        .hero-mobile-link:focus-visible span {
+            color: rgba(212, 175, 55, 0.95);
+            letter-spacing: 0.38em;
+        }
+
         /* //Slide Counter (bottom left)// */
         .hero-counter {
             position: absolute;
@@ -767,6 +1139,10 @@
             .hero-nav {
                 left: 20px;
             }
+            .hero-social-rail {
+                transform: translateY(-50%) scale(0.92);
+                transform-origin: right center;
+            }
         }
 
         @media (max-width: 700px) {
@@ -791,6 +1167,41 @@
             .hero-counter {
                 left: 24px;
                 bottom: 30px;
+            }
+            .hero-social-rail {
+                top: 47%;
+                gap: 12px;
+                transform: translateY(-50%);
+                animation: socialRailEntry 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.75s both;
+            }
+            .hero-social-tab {
+                height: 46px;
+                width: 20px;
+                clip-path: polygon(8px 0, 100% 0, 100% 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
+                opacity: 0.8;
+                filter: saturate(0.78) brightness(0.86);
+            }
+            .hero-social-tab svg {
+                width: 11px;
+                height: 11px;
+            }
+            .hero-social-tab.is-facebook svg {
+                width: 10px;
+                height: 10px;
+            }
+            .hero-social-tab.is-instagram svg {
+                width: 9px;
+                height: 9px;
+            }
+            .hero-social-tab.is-linkedin svg {
+                width: 8.5px;
+                height: 8.5px;
+            }
+            .hero-mobile-toggle {
+                display: inline-flex;
+            }
+            .hero-mobile-nav {
+                display: block;
             }
         }
 
@@ -3692,6 +4103,30 @@
         <img src="sj-logo.png" alt="Schröder's Joinery Logo">
     </a>
 
+    <!-- //Sticky Mobile Navigation// -->
+    <button class="hero-mobile-toggle" id="heroMobileToggle" type="button" aria-expanded="false"
+        aria-controls="heroMobileNav" aria-label="Open site navigation">
+        <span class="hero-mobile-toggle-core" aria-hidden="true">
+            <span class="hero-mobile-line hero-mobile-line-top"></span>
+            <span class="hero-mobile-line hero-mobile-line-mid"></span>
+            <span class="hero-mobile-line hero-mobile-line-bot"></span>
+        </span>
+    </button>
+
+    <div class="hero-mobile-nav" id="heroMobileNav" hidden>
+        <button class="hero-mobile-nav-backdrop" type="button" aria-label="Close site navigation"
+            data-mobile-nav-close></button>
+        <nav class="hero-mobile-nav-panel" aria-label="Mobile site navigation">
+            <div class="hero-mobile-nav-links">
+                <a class="hero-mobile-link" href="#svcSection"><span>Services</span></a>
+                <a class="hero-mobile-link" href="#materialsSection"><span>Materials</span></a>
+                <a class="hero-mobile-link" href="#portfolioSection"><span>Portfolio</span></a>
+                <a class="hero-mobile-link" href="#storySection"><span>Our Story</span></a>
+                <a class="hero-mobile-link" href="#contactSection"><span>Contact Us</span></a>
+            </div>
+        </nav>
+    </div>
+
     <!-- //Hero Section// -->
     <section class="hero" id="heroSection">
 
@@ -3724,6 +4159,31 @@
             <a class="h-nav-item" href="#storySection"><span>Our Story</span></a>
             <a class="h-nav-item" href="#contactSection"><span>Contact Us</span></a>
         </nav>
+
+        <!-- //Hero Social Tabs// -->
+        <div class="hero-social-rail" aria-label="Social media links">
+            <a class="hero-social-tab is-facebook" href="https://www.facebook.com/schrodersjoinery/" target="_blank"
+                rel="noopener" aria-label="Schroder's Joinery on Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                        d="M13.32 21v-8.2h2.76l.41-3.2h-3.17V7.56c0-.93.26-1.56 1.58-1.56h1.69V3.14C15.78 3.05 15.04 3 14.18 3c-2.53 0-4.26 1.54-4.26 4.39V9.6H7.05v3.2h2.87V21h3.4z" />
+                </svg>
+            </a>
+            <a class="hero-social-tab is-instagram" href="https://www.instagram.com/schroders_joinery/" target="_blank"
+                rel="noopener" aria-label="Schroder's Joinery on Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                        d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 1.8A3.7 3.7 0 0 0 3.8 7.5v9a3.7 3.7 0 0 0 3.7 3.7h9a3.7 3.7 0 0 0 3.7-3.7v-9a3.7 3.7 0 0 0-3.7-3.7h-9zm9.68 1.34a1.08 1.08 0 1 1 0 2.16 1.08 1.08 0 0 1 0-2.16zM12 6.6A5.4 5.4 0 1 1 6.6 12 5.4 5.4 0 0 1 12 6.6zm0 1.8A3.6 3.6 0 1 0 15.6 12 3.6 3.6 0 0 0 12 8.4z" />
+                </svg>
+            </a>
+            <a class="hero-social-tab is-linkedin" href="https://za.linkedin.com/company/schr%C3%B6ders-joinery+" target="_blank"
+                rel="noopener" aria-label="Schroder's Joinery on LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                        d="M5.4 8.4A1.95 1.95 0 1 1 5.39 4.5 1.95 1.95 0 0 1 5.4 8.4zM3.74 9.77h3.31V20.5H3.74zm5.38 0h3.18v1.47h.05c.44-.84 1.53-1.73 3.15-1.73 3.36 0 3.98 2.21 3.98 5.08v5.9h-3.31v-5.23c0-1.25-.02-2.85-1.73-2.85-1.73 0-2 1.35-2 2.75v5.33H9.12V9.77z" />
+                </svg>
+            </a>
+        </div>
 
         <!-- //Slide Counter// -->
         <div class="hero-counter">
@@ -4264,10 +4724,15 @@
             const counterEl = document.getElementById('hCounterCurr');
             const dotEls = document.querySelectorAll('.h-dot');
             const progressBar = document.getElementById('heroProgressBar');
+            const mobileToggle = document.getElementById('heroMobileToggle');
+            const mobileNav = document.getElementById('heroMobileNav');
+            const mobileNavBackdrop = mobileNav ? mobileNav.querySelector('[data-mobile-nav-close]') : null;
+            const mobileNavLinks = mobileNav ? mobileNav.querySelectorAll('.hero-mobile-link') : [];
 
             let current = 0;
             let timer = null;
             let progTimer = null;
+            let mobileNavTimer = null;
             const DURATION = 7000; // ms per slide
             let progStart = null;
 
@@ -4329,6 +4794,93 @@
 
             /* Dot click */
             dotEls.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+
+            function setMobileNavState(isOpen) {
+                if (!mobileToggle || !mobileNav) return;
+
+                mobileToggle.setAttribute('aria-expanded', String(isOpen));
+                mobileToggle.setAttribute('aria-label', isOpen ? 'Close site navigation' : 'Open site navigation');
+                document.body.classList.toggle('mobile-nav-open', isOpen);
+            }
+
+            function openMobileNav() {
+                if (!mobileToggle || !mobileNav) return;
+
+                clearTimeout(mobileNavTimer);
+                mobileNav.hidden = false;
+                setMobileNavState(true);
+
+                requestAnimationFrame(() => {
+                    mobileNav.classList.add('is-open');
+                });
+            }
+
+            function closeMobileNav(options = {}) {
+                if (!mobileToggle || !mobileNav) return;
+
+                const { restoreFocus = true } = options;
+                setMobileNavState(false);
+                mobileNav.classList.remove('is-open');
+
+                clearTimeout(mobileNavTimer);
+                mobileNavTimer = setTimeout(() => {
+                    mobileNav.hidden = true;
+                }, 360);
+
+                if (restoreFocus) {
+                    mobileToggle.focus({ preventScroll: true });
+                }
+            }
+
+            if (mobileToggle && mobileNav) {
+                mobileToggle.addEventListener('click', () => {
+                    const isOpen = mobileToggle.getAttribute('aria-expanded') === 'true';
+                    if (isOpen) {
+                        closeMobileNav();
+                    } else {
+                        openMobileNav();
+                    }
+                });
+
+                if (mobileNavBackdrop) {
+                    mobileNavBackdrop.addEventListener('click', () => closeMobileNav());
+                }
+
+                mobileNavLinks.forEach(link => {
+                    link.addEventListener('click', (event) => {
+                        const targetId = link.getAttribute('href');
+                        if (!targetId || !targetId.startsWith('#')) {
+                            closeMobileNav({ restoreFocus: false });
+                            return;
+                        }
+
+                        const targetEl = document.querySelector(targetId);
+                        if (!targetEl) {
+                            closeMobileNav({ restoreFocus: false });
+                            return;
+                        }
+
+                        event.preventDefault();
+                        closeMobileNav({ restoreFocus: false });
+
+                        setTimeout(() => {
+                            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }, 90);
+                    });
+                });
+
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape' && mobileToggle.getAttribute('aria-expanded') === 'true') {
+                        closeMobileNav();
+                    }
+                });
+
+                window.addEventListener('resize', () => {
+                    if (window.innerWidth > 700 && mobileToggle.getAttribute('aria-expanded') === 'true') {
+                        closeMobileNav({ restoreFocus: false });
+                    }
+                });
+            }
 
             /* Kick off */
             sliders[0].classList.add('active-s1');
