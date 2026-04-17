@@ -2819,6 +2819,22 @@
             transform: translateX(4px);
         }
 
+        .footer-secondary-mark {
+            display: block;
+            width: 140px;
+            height: auto;
+            margin-top: 22px;
+            opacity: 0.82;
+            filter: brightness(1.02) drop-shadow(0 0 8px rgba(212,175,55,0.12));
+            transition: opacity 0.4s ease, filter 0.4s ease, transform 0.4s ease;
+        }
+
+        .footer-secondary-mark:hover {
+            opacity: 1;
+            filter: brightness(1.15) drop-shadow(0 0 16px rgba(212,175,55,0.32));
+            transform: translateY(-2px);
+        }
+
         .footer-ledger {
             position: relative;
             display: grid;
@@ -4620,6 +4636,7 @@
                     <p class="footer-brand-copy">
                         Owner operated custom kitchens, cabinetry and bespoke furniture, crafted in Johannesburg with precision, restraint and intent.
                     </p>
+                    <img src="tri-logo.png" alt="Schröder's Joinery Badge" class="footer-secondary-mark">
                     <a class="footer-coordinate" href="https://www.google.com/maps/search/?api=1&amp;query=-26.0734,27.9216" target="_blank" rel="noopener">
                         -26.0734 / 27.9216
                     </a>
