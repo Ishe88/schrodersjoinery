@@ -248,7 +248,9 @@
            PORTFOLIO PAGE HEADER / HERO
         ============================== */
         .pf-page-hero {
-            position: relative;
+            position: sticky;
+            top: 0;
+            z-index: 1;
             width: 100%;
             height: 100vh;
             min-height: 620px;
@@ -257,6 +259,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .pg-content-wrap {
+            position: relative;
+            z-index: 10;
+            background: var(--navy);
+            width: 100%;
         }
 
         /* Cinematic BG — rotating 6 images with crossfade */
@@ -495,7 +504,9 @@
            DISCIPLINE SELECTOR BAR
         ============================== */
         .disc-bar {
-            position: relative; z-index: 10;
+            position: sticky;
+            top: 0;
+            z-index: 100;
             background: linear-gradient(180deg, #04091C 0%, #060e22 100%);
             border-bottom: 1px solid rgba(212,175,55,0.12);
             overflow: hidden;
@@ -1137,6 +1148,54 @@
             .g-item, .g-img, .panel-header, .pf-hero-kicker, .pf-hero-title, .pf-hero-desc { transition: none !important; animation: none !important; }
             .g-item, .panel-header, .pf-hero-kicker, .pf-hero-title, .pf-hero-desc { opacity: 1 !important; transform: none !important; }
         }
+
+        /* ==============================
+           BACK TO TOP + CURSOR GLOW
+        ============================== */
+        .svc-btt {
+            position: fixed;
+            bottom: 36px;
+            right: 36px;
+            z-index: 9000;
+            width: 44px;
+            height: 44px;
+            background: rgba(4, 9, 28, 0.88);
+            border: 1px solid rgba(212, 175, 55, 0.22);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(12px);
+            transition: opacity 0.36s ease, transform 0.36s ease, background 0.28s ease, border-color 0.28s ease;
+            backdrop-filter: blur(8px);
+        }
+
+        .svc-btt.visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        .svc-btt:hover {
+            background: rgba(212, 175, 55, 0.14);
+            border-color: rgba(212, 175, 55, 0.50);
+        }
+
+        .svc-btt svg {
+            width: 16px;
+            height: 16px;
+            stroke: rgba(212, 175, 55, 0.65);
+            stroke-width: 1.5;
+            fill: none;
+            transition: stroke 0.28s ease;
+        }
+
+        .svc-btt:hover svg {
+            stroke: rgba(212, 175, 55, 0.95);
+        }
     </style>
 </head>
 
@@ -1246,7 +1305,9 @@
         </div>
 
     </header>
-
+ 
+    <div class="pg-content-wrap">
+ 
     <!-- //Discipline Selector Bar// -->
     <nav class="disc-bar" id="discBar" aria-label="Portfolio disciplines">
         <div class="disc-bar-inner">
@@ -1453,7 +1514,7 @@
                         Owner operated custom kitchens, cabinetry and bespoke furniture, crafted in Johannesburg with
                         precision, restraint and intent.
                     </p>
-                    <img src="tri-logo.png" alt="Schröder's Joinery Badge" class="footer-secondary-mark">
+                    <img src="sj-full-logo.png" alt="Schröder's Joinery Badge" class="footer-secondary-mark">
                     <a class="footer-coordinate"
                         href="https://www.google.com/maps/search/?api=1&amp;query=-26.0734,27.9216" target="_blank"
                         rel="noopener">
@@ -1516,7 +1577,16 @@
             </div>
         </div>
     </footer>
-
+ 
+    </div> <!-- //End of pg-content-wrap// -->
+ 
+    <!-- //Back To Top Button// -->
+    <button class="svc-btt" id="bttBtn" type="button" aria-label="Scroll back to top">
+        <svg viewBox="0 0 24 24">
+            <polyline points="18 15 12 9 6 15"/>
+        </svg>
+    </button>
+ 
     <!-- ==============================
          SCRIPTS
     ============================== -->
@@ -1942,6 +2012,21 @@ toggle.getAttribute('aria-expanded') === 'true' ? close() : open();
                 entries.forEach(e => { if (e.isIntersecting) { footer.classList.add('vis'); obs.unobserve(footer); } });
             }, { rootMargin: '0px 0px -12% 0px', threshold: 0.16 });
             obs.observe(footer);
+
+            // //Back To Top Button
+            const btt = document.getElementById('bttBtn');
+            if (btt) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > window.innerHeight * 0.5) {
+                        btt.classList.add('visible');
+                    } else {
+                        btt.classList.remove('visible');
+                    }
+                }, { passive: true });
+                btt.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
         })();
     </script>
 
