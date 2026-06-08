@@ -1,0 +1,3121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- //SEO & Meta// -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bespoke Joinery Services | Custom Kitchens & Woodwork | Schröder's Joinery</title>
+    <meta name="description" content="Discover our bespoke joinery services. Schröder's Joinery crafts custom kitchens, fitted cabinetry, office workspaces, luxury bathrooms, and complete interiors in Midrand and Kyalami. Crafted with precision, restraint and intent.">
+    <meta name="keywords" content="bespoke joinery Midrand, custom kitchens Kyalami, fitted cabinetry Johannesburg, bespoke furniture South Africa, luxury bathroom joinery, office fitout Midrand, interior joinery, custom woodwork Gauteng, Schröder's Joinery">
+    <meta name="author" content="Schröder's Joinery">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://www.schrodersjoinery.co.za/services/">
+
+    <!-- //Open Graph// -->
+    <meta property="og:title" content="Bespoke Joinery Services | Schröder's Joinery">
+    <meta property="og:description" content="Crafted with intent. Discover our bespoke kitchens, cabinetry, offices, furniture, bathrooms, and architectural interiors in Midrand, South Africa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.schrodersjoinery.co.za/services/">
+    <meta property="og:site_name" content="Schröder's Joinery">
+    <meta property="og:locale" content="en_ZA">
+
+    <!-- //Twitter Card// -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bespoke Joinery Services | Schröder's Joinery">
+    <meta name="twitter:description" content="Precision design, manufacture, and installation of premium custom woodwork.">
+
+    <!-- //Structured Data// -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Schröder's Joinery",
+        "url": "https://www.schrodersjoinery.co.za",
+        "telephone": "+27117944136",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Kyalami",
+            "addressLocality": "Midrand",
+            "addressRegion": "Gauteng",
+            "addressCountry": "ZA"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Bespoke Joinery Services",
+            "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bespoke Kitchens"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom Cabinetry"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Office Joinery & Fitouts"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bespoke Furniture"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Luxury Bathrooms"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Full Interior Joinery"}}
+            ]
+        }
+    }
+    </script>
+
+    <!-- //Fonts// -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==============================
+           RESET & ROOT
+        ============================== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --gold-lt: #F0D668;
+            --gold-dk: #9a7218;
+            --navy: #04091C;
+            --navy-mid: #060d28;
+            --navy-lt: #0a1535;
+            --cyan: #3DCFBF;
+            --white: #ffffff;
+            --dim: rgba(255, 255, 255, 0.52);
+            --dim-lo: rgba(255, 255, 255, 0.28);
+        }
+
+        body {
+            background: var(--navy);
+            color: var(--white);
+            font-family: 'Jost', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* ==============================
+           STICKY HEADER & NAVIGATION (from index.html)
+        ============================== */
+        .sticky-logo-btn {
+            position: fixed;
+            top: 22px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-70px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            cursor: pointer;
+            background: rgba(8, 21, 42, 0.80);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(212, 175, 55, 0.22);
+            border-radius: 50px;
+            padding: 7px 10px;
+            opacity: 0;
+            transition:
+                transform 0.55s cubic-bezier(0.34, 1.36, 0.64, 1),
+                opacity 0.40s ease,
+                border-color 0.36s ease,
+                box-shadow 0.36s ease;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.40);
+        }
+
+        .sticky-logo-btn.visible {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        .sticky-logo-btn:hover {
+            border-color: rgba(212, 175, 55, 0.58);
+            box-shadow: 0 6px 40px rgba(212, 175, 55, 0.18), 0 4px 28px rgba(0, 0, 0, 0.42);
+        }
+
+        .sticky-logo-btn img {
+            height: 34px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.28));
+            transition: filter 0.36s ease;
+        }
+
+        .sticky-logo-btn:hover img {
+            filter: drop-shadow(0 0 14px rgba(212, 175, 55, 0.60));
+        }
+
+        .sticky-logo-label {
+            font-family: 'Jost', sans-serif;
+            font-size: 9px;
+            font-weight: 500;
+            letter-spacing: 0.38em;
+            text-transform: uppercase;
+            color: rgba(212, 175, 55, 0.72);
+            white-space: nowrap;
+            transition: color 0.36s ease, letter-spacing 0.36s ease;
+        }
+
+        .sticky-logo-btn:hover .sticky-logo-label {
+            color: rgba(212, 175, 55, 1);
+            letter-spacing: 0.48em;
+        }
+
+        /* Mobile Toggle */
+        .hero-mobile-toggle {
+            position: fixed;
+            top: 34px;
+            left: 24px;
+            z-index: 10001;
+            width: 36px;
+            height: 28px;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+            color: var(--white);
+            opacity: 0.84;
+            -webkit-tap-highlight-color: transparent;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            display: none; /* Desktop hidden, shown in media query */
+        }
+
+        .hero-mobile-toggle:hover {
+            opacity: 1;
+            transform: translateY(-1px);
+        }
+
+        .hero-mobile-toggle-core {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-mobile-toggle-core::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            bottom: 2px;
+            width: 1px;
+            background: rgba(255, 255, 255, 0.24);
+            opacity: 0;
+            transform: scaleY(0.35);
+            transform-origin: top center;
+            transition: opacity 0.24s ease, transform 0.34s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .hero-mobile-line {
+            position: absolute;
+            left: 8px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.9);
+            transform-origin: left center;
+            transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1), width 0.34s ease, opacity 0.22s ease;
+        }
+
+        .hero-mobile-line-top { top: 3px; width: 28px; }
+        .hero-mobile-line-mid { top: 13px; width: 16px; }
+        .hero-mobile-line-bot { top: 23px; width: 22px; }
+
+        .hero-mobile-toggle[aria-expanded="true"] .hero-mobile-toggle-core::before {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+
+        .hero-mobile-toggle[aria-expanded="true"] .hero-mobile-line-top {
+            width: 28px;
+            transform: translateY(10px) rotate(38deg);
+        }
+
+        .hero-mobile-toggle[aria-expanded="true"] .hero-mobile-line-mid {
+            opacity: 0;
+            transform: translateX(-8px);
+        }
+
+        .hero-mobile-toggle[aria-expanded="true"] .hero-mobile-line-bot {
+            width: 28px;
+            transform: translateY(-10px) rotate(-38deg);
+        }
+
+        /* Mobile Nav Backdrop & Panel */
+        .hero-mobile-nav {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            pointer-events: none;
+            display: none;
+        }
+
+        .hero-mobile-nav-backdrop {
+            position: absolute;
+            inset: 0;
+            border: 0;
+            background: linear-gradient(90deg, rgba(3, 7, 18, 0.88) 0%, rgba(3, 7, 18, 0.62) 28%, rgba(3, 7, 18, 0.18) 54%, rgba(3, 7, 18, 0) 76%);
+            opacity: 0;
+            cursor: pointer;
+            transition: opacity 0.28s ease;
+        }
+
+        .hero-mobile-nav-panel {
+            position: fixed;
+            top: 96px;
+            left: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            padding-left: 18px;
+            max-width: calc(100vw - 48px);
+            transform: translateX(-18px);
+            opacity: 0;
+            transition: transform 0.36s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.24s ease;
+        }
+
+        .hero-mobile-nav-panel::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            bottom: 2px;
+            width: 1px;
+            background: linear-gradient(to bottom, rgba(212, 175, 55, 0.72) 0%, rgba(212, 175, 55, 0.24) 62%, transparent 100%);
+        }
+
+        .hero-mobile-nav.is-open {
+            pointer-events: auto;
+        }
+
+        .hero-mobile-nav.is-open .hero-mobile-nav-backdrop {
+            opacity: 1;
+        }
+
+        .hero-mobile-nav.is-open .hero-mobile-nav-panel {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .hero-mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .hero-mobile-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            width: fit-content;
+            text-decoration: none;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: opacity 0.22s ease, transform 0.36s cubic-bezier(0.22, 1, 0.36, 1), color 0.32s ease;
+        }
+
+        .hero-mobile-link::before {
+            content: '';
+            display: block;
+            width: 18px;
+            height: 1px;
+            background: rgba(212, 175, 55, 0.50);
+            flex-shrink: 0;
+            transition: width 0.36s ease, background 0.36s ease;
+        }
+
+        .hero-mobile-link span {
+            font-family: 'Jost', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.52);
+            white-space: nowrap;
+            transition: color 0.32s ease, letter-spacing 0.36s ease;
+        }
+
+        .hero-mobile-nav.is-open .hero-mobile-link {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .hero-mobile-nav.is-open .hero-mobile-link:nth-child(1) { transition-delay: 0.03s; }
+        .hero-mobile-nav.is-open .hero-mobile-link:nth-child(2) { transition-delay: 0.08s; }
+        .hero-mobile-nav.is-open .hero-mobile-link:nth-child(3) { transition-delay: 0.13s; }
+        .hero-mobile-nav.is-open .hero-mobile-link:nth-child(4) { transition-delay: 0.18s; }
+        .hero-mobile-nav.is-open .hero-mobile-link:nth-child(5) { transition-delay: 0.23s; }
+
+        .hero-mobile-link:hover::before, .hero-mobile-link:focus-visible::before {
+            width: 30px;
+            background: #D4AF37;
+        }
+
+        .hero-mobile-link:hover span, .hero-mobile-link:focus-visible span {
+            color: rgba(212, 175, 55, 0.95);
+            letter-spacing: 0.38em;
+        }
+
+        /* Desktop Left Navigation menu */
+        .hero-nav {
+            position: absolute;
+            left: 46px;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .h-nav-item {
+            position: absolute;
+            left: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            cursor: pointer;
+            animation: navSlideIn 0.8s cubic-bezier(0.34, 1.28, 0.64, 1) both;
+        }
+
+        .h-nav-item::before {
+            content: '';
+            display: block;
+            width: 18px;
+            height: 1px;
+            background: rgba(212, 175, 55, 0.50);
+            flex-shrink: 0;
+            transition: width 0.36s ease, background 0.36s ease;
+        }
+
+        .h-nav-item:hover::before {
+            width: 30px;
+            background: #D4AF37;
+        }
+
+        .h-nav-item span {
+            font-family: 'Jost', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.52);
+            transition: color 0.32s ease, letter-spacing 0.36s ease;
+            white-space: nowrap;
+        }
+
+        .h-nav-item:hover span {
+            color: rgba(212, 175, 55, 0.95);
+            letter-spacing: 0.38em;
+        }
+
+        @keyframes navSlideIn {
+            from { opacity: 0; transform: translateX(-28px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+
+        .h-nav-item:nth-child(1) { top: 110px; animation-delay: 0.55s; }
+        .h-nav-item:nth-child(2) { top: 162px; animation-delay: 0.68s; }
+        .h-nav-item:nth-child(3) { top: 214px; animation-delay: 0.81s; }
+        .h-nav-item:nth-child(4) { top: 266px; animation-delay: 0.94s; }
+        .h-nav-item:nth-child(5) { top: 318px; animation-delay: 1.07s; }
+
+        /* Social Media Rail */
+        .hero-social-rail {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            z-index: 11;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 18px;
+            transform: translateY(-50%);
+            animation: socialRailEntry 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.95s both;
+        }
+
+        @keyframes socialRailEntry {
+            from { opacity: 0; transform: translate(18px, -50%); }
+            to   { opacity: 1; transform: translate(0, -50%); }
+        }
+
+        .hero-social-tab {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 58px;
+            width: 24px;
+            color: #ffffff;
+            text-decoration: none;
+            clip-path: polygon(10px 0, 100% 0, 100% 100%, 10px 100%, 0 calc(100% - 10px), 0 10px);
+            border-radius: 0;
+            background: linear-gradient(180deg, rgba(116, 122, 130, 0.78), rgba(90, 96, 104, 0.88));
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
+            opacity: 0.76;
+            filter: saturate(0.48) brightness(0.84);
+            transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.28s ease, box-shadow 0.34s ease, filter 0.34s ease;
+        }
+
+        .hero-social-tab::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--social-hover);
+            opacity: 0;
+            transition: opacity 0.34s ease;
+            z-index: 0;
+        }
+
+        .hero-social-tab::after {
+            content: '';
+            position: absolute;
+            inset: 1px 0 1px 1px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0) 54%);
+            pointer-events: none;
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        .hero-social-tab:hover, .hero-social-tab:focus-visible {
+            transform: translateX(-4px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+            opacity: 1;
+            filter: saturate(1) brightness(1.03);
+        }
+
+        .hero-social-tab:hover::before, .hero-social-tab:focus-visible::before {
+            opacity: 1;
+        }
+
+        .hero-social-tab svg {
+            width: 13px;
+            height: 13px;
+            fill: currentColor;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-social-tab.is-facebook { --social-hover: #1877F2; }
+        .hero-social-tab.is-facebook svg { width: 12px; height: 12px; }
+        .hero-social-tab.is-instagram { --social-hover: linear-gradient(135deg, #F58529 0%, #FEDA77 20%, #DD2A7B 52%, #8134AF 76%, #515BD4 100%); }
+        .hero-social-tab.is-instagram svg { width: 11px; height: 11px; }
+        .hero-social-tab.is-linkedin { --social-hover: #0A66C2; }
+        .hero-social-tab.is-linkedin svg { width: 10.5px; height: 10.5px; }
+
+        @media (max-width: 1140px) {
+            .hero-nav { left: 20px; }
+            .hero-social-rail { transform: translateY(-50%) scale(0.92); transform-origin: right center; }
+        }
+
+        @media (max-width: 700px) {
+            .hero-mobile-toggle { display: inline-flex; }
+            .hero-mobile-nav { display: block; }
+            .hero-nav { display: none; }
+            .hero-social-rail { top: 47%; gap: 12px; transform: translateY(-50%); }
+            .hero-social-tab { height: 46px; width: 20px; clip-path: polygon(8px 0, 100% 0, 100% 100%, 8px 100%, 0 calc(100% - 8px), 0 8px); opacity: 0.8; }
+            .hero-social-tab svg { width: 11px; height: 11px; }
+        }
+
+        /* ==============================
+           PAGE HERO
+        ============================== */
+        /* //Logo Zone (from index.html)// */
+        .hero-logo-wrap {
+            position: absolute;
+            top: 36px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            animation: logoEntry 1.4s cubic-bezier(0.34, 1.36, 0.64, 1) 0.2s both;
+        }
+
+        @keyframes logoEntry {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-24px) scale(0.88);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0) scale(1);
+            }
+        }
+
+        .hero-logo {
+            height: 90px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* thin gold rule under logo */
+        .hero-logo-rule {
+            width: 1px;
+            height: 28px;
+            background: linear-gradient(to bottom, rgba(212, 175, 55, 0.72), transparent);
+            margin: 0 auto;
+        }
+
+        .pg-hero {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            height: 50vh;
+            min-height: 300px;
+            overflow: hidden;
+            background: var(--navy);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .pg-content-wrap {
+            position: relative;
+            z-index: 10;
+            background: var(--navy);
+            width: 100%;
+        }
+
+        .pg-hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('service-hero.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            transform: scale(1.06);
+            animation: pgHeroKenBurns 18s ease-in-out infinite alternate;
+        }
+
+        @keyframes pgHeroKenBurns {
+            from { transform: scale(1.06) translateX(-1%); }
+            to   { transform: scale(1.00) translateX(1%); }
+        }
+
+        .pg-hero-vignette {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            pointer-events: none;
+            background:
+                linear-gradient(to top, rgba(4,9,28,0.98) 0%, rgba(4,9,28,0.72) 28%, rgba(4,9,28,0.18) 58%, transparent 76%),
+                linear-gradient(to right, rgba(4,9,28,0.78) 0%, rgba(4,9,28,0.32) 22%, transparent 46%),
+                linear-gradient(to bottom, rgba(4,9,28,0.72) 0%, transparent 28%);
+        }
+
+        .pg-hero-diag {
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .pg-hero-diag::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -20%;
+            width: 1px;
+            height: 140%;
+            background: linear-gradient(to bottom, transparent 0%, rgba(212,175,55,0.18) 30%, rgba(212,175,55,0.45) 52%, rgba(212,175,55,0.18) 70%, transparent 100%);
+            transform: rotate(-24deg);
+            transform-origin: top left;
+            animation: diagDrift 12s ease-in-out infinite alternate;
+        }
+
+        @keyframes diagDrift {
+            from { left: -20%; opacity: 0.5; }
+            to   { left: -8%; opacity: 1; }
+        }
+
+        .pg-hero-grain {
+            position: absolute;
+            inset: 0;
+            z-index: 4;
+            pointer-events: none;
+            opacity: 0.032;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 256px 256px;
+        }
+
+        .pg-hero-dust {
+            position: absolute;
+            inset: 0;
+            z-index: 5;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .ph-dust-p {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(212,175,55,0.55);
+            animation: phDustFloat linear infinite;
+        }
+
+        @keyframes phDustFloat {
+            0%   { transform: translateY(100vh) translateX(0px); opacity: 0; }
+            10%  { opacity: 1; }
+            90%  { opacity: 0.5; }
+            100% { transform: translateY(-12vh) translateX(var(--drift,20px)); opacity: 0; }
+        }
+
+        .pg-hero-copy {
+            position: relative;
+            z-index: 10;
+            padding: 0 120px 50px;
+            max-width: 860px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .pg-hero-eyebrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            font-family: 'Jost', sans-serif;
+            font-size: 9px;
+            font-weight: 500;
+            letter-spacing: 0.48em;
+            text-transform: uppercase;
+            color: var(--cyan);
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(14px);
+            animation: fadeUpIn 0.8s ease 0.4s both;
+        }
+
+        .pg-hero-eyebrow::before,
+        .pg-hero-eyebrow::after {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: var(--cyan);
+            flex-shrink: 0;
+        }
+
+        .pg-hero-breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 32px;
+            opacity: 0;
+            animation: fadeUpIn 0.7s ease 0.6s both;
+        }
+
+        .pg-hero-breadcrumb a, .pg-hero-breadcrumb span {
+            font-family: 'Jost', sans-serif;
+            font-size: 10px;
+            font-weight: 300;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.30);
+            text-decoration: none;
+            transition: color 0.28s ease;
+        }
+
+        .pg-hero-breadcrumb a:hover {
+            color: rgba(212,175,55,0.70);
+        }
+
+        .pg-hero-breadcrumb .sep {
+            font-size: 8px;
+            color: rgba(212,175,55,0.28);
+        }
+
+        .pg-hero-breadcrumb .current {
+            color: rgba(212,175,55,0.55);
+        }
+
+        .pg-hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            font-size: clamp(4.2rem, 9vw, 12rem);
+            line-height: 0.86;
+            letter-spacing: -0.03em;
+            background: linear-gradient(148deg,#ffffff 0%,#f5f5f0 22%,#eed99a 50%,#D4AF37 74%,#9a7218 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(36px);
+            animation: fadeUpIn 1.0s cubic-bezier(0.16,1,0.3,1) 0.7s both;
+        }
+
+        .pg-hero-sub {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 300;
+            font-size: clamp(1.1rem, 2vw, 2.2rem);
+            color: rgba(255, 255, 255, 0.38);
+            letter-spacing: 0.06em;
+            margin-bottom: 32px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(18px);
+            animation: fadeUpIn 0.8s ease 1.0s both;
+        }
+
+        .pg-hero-desc {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 300;
+            line-height: 1.82;
+            color: rgba(255, 255, 255, 0.46);
+            max-width: 480px;
+            margin-inline: auto;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(16px);
+            animation: fadeUpIn 0.8s ease 1.2s both;
+        }
+
+        @media (max-width: 900px) {
+            .pg-hero-copy { padding: 0 28px 60px; }
+        }
+
+        @media (max-width: 540px) {
+            .pg-hero-copy { padding: 0 20px 65px; }
+        }
+
+        /* ==============================
+           UTILITY KEYFRAMES
+        ============================== */
+        @keyframes fadeUpIn {
+            from { opacity: 0; transform: translateY(18px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Scroll reveal base classes */
+        .sv-reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .sv-reveal.vis {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .sv-reveal-left {
+            opacity: 0;
+            transform: translateX(-32px);
+            transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .sv-reveal-left.vis {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .sv-reveal-right {
+            opacity: 0;
+            transform: translateX(32px);
+            transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .sv-reveal-right.vis {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ==============================
+           THE PROCESS SECTION
+        ============================== */
+        .svc-process {
+            position: relative;
+            z-index: 10;
+            background: var(--navy);
+            padding: 140px 0;
+            overflow: hidden;
+        }
+
+        .svc-process-ghost {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(8rem, 20vw, 22rem);
+            font-weight: 700;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(212, 175, 55, 0.03);
+            pointer-events: none;
+            white-space: nowrap;
+            z-index: 0;
+            letter-spacing: 0.08em;
+            user-select: none;
+        }
+
+        .svc-process-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 80px;
+        }
+
+        .svc-section-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-family: 'Jost', sans-serif;
+            font-size: 9px;
+            font-weight: 500;
+            letter-spacing: 0.48em;
+            text-transform: uppercase;
+            color: var(--cyan);
+            margin-bottom: 22px;
+        }
+
+        .svc-section-eyebrow::before {
+            content: '';
+            width: 22px;
+            height: 1px;
+            background: var(--cyan);
+            flex-shrink: 0;
+        }
+
+        .svc-section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            font-size: clamp(2.8rem, 5vw, 6.2rem);
+            line-height: 0.92;
+            letter-spacing: -0.028em;
+            color: var(--white);
+        }
+
+        .svc-section-title em {
+            font-style: italic;
+            font-weight: 300;
+            color: rgba(212, 175, 55, 0.70);
+        }
+
+        .svc-gold-rule {
+            width: 0;
+            height: 1px;
+            background: linear-gradient(90deg, var(--gold) 0%, rgba(212, 175, 55, 0.20) 70%, transparent 100%);
+            margin: 32px 0;
+            transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .svc-gold-rule.vis {
+            width: 180px;
+        }
+
+        .svc-process-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+            margin-top: 60px;
+        }
+
+        .svc-proc-text p {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 300;
+            line-height: 1.92;
+            color: rgba(255, 255, 255, 0.52);
+            max-width: 520px;
+            margin-bottom: 28px;
+        }
+
+        .svc-proc-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .svc-proc-text .accent {
+            color: rgba(212, 175, 55, 0.80);
+            font-weight: 400;
+        }
+
+        .svc-proc-img-wrap {
+            margin-top: 40px;
+            width: 100%;
+            max-width: 520px;
+            aspect-ratio: 1.8;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+            box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
+        .svc-proc-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.85;
+            transition: opacity 0.5s ease, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .svc-proc-img-wrap:hover .svc-proc-img {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .svc-proc-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .svc-proc-step {
+            display: flex;
+            gap: 28px;
+            align-items: flex-start;
+            padding: 32px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            cursor: default;
+            transition: background 0.36s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .svc-proc-step:first-child {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .svc-proc-step::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            background: rgba(212, 175, 55, 0.03);
+            transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .svc-proc-step:hover::before {
+            width: 100%;
+        }
+
+        .svc-proc-step-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.4rem;
+            font-weight: 300;
+            color: rgba(212, 175, 55, 0.20);
+            line-height: 1;
+            flex-shrink: 0;
+            width: 52px;
+            transition: color 0.36s ease;
+        }
+
+        .svc-proc-step:hover .svc-proc-step-num {
+            color: rgba(212, 175, 55, 0.60);
+        }
+
+        .svc-proc-step-body {
+            flex: 1;
+        }
+
+        .svc-proc-step-title {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.80);
+            margin-bottom: 8px;
+            transition: color 0.32s ease;
+        }
+
+        .svc-proc-step:hover .svc-proc-step-title {
+            color: var(--gold);
+        }
+
+        .svc-proc-step-desc {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 300;
+            line-height: 1.78;
+            color: rgba(255, 255, 255, 0.38);
+        }
+
+        @media (max-width: 900px) {
+            .svc-process-inner { padding: 0 28px; }
+            .svc-process-grid  { grid-template-columns: 1fr; gap: 48px; }
+            .svc-section-title { font-size: clamp(2.4rem, 8vw, 4rem); }
+        }
+
+        /* ==============================
+           BESPOKE SERVICE GALLERIES (Editorial Grid)
+        ============================== */
+        .svc-galleries {
+            position: relative;
+            background: var(--navy);
+            padding: 140px 0;
+            overflow: hidden;
+        }
+
+        .svc-galleries-inner {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 160px;
+        }
+
+        .svc-gallery-row {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 100px;
+            align-items: center;
+        }
+
+        .svc-gallery-row:nth-child(even) {
+            grid-template-columns: 0.85fr 1.15fr;
+        }
+
+        .svc-gallery-row:nth-child(even) .svc-gallery-img-col {
+            order: 2;
+        }
+
+        .svc-gallery-row:nth-child(even) .svc-gallery-text-col {
+            order: 1;
+        }
+
+        .svc-gallery-img-col {
+            position: relative;
+        }
+
+        .svc-gallery-img-wrap {
+            position: relative;
+            overflow: visible;
+            aspect-ratio: 16/11;
+            z-index: 2;
+            box-shadow: 0 28px 70px rgba(0, 0, 0, 0.70);
+            background: var(--navy-mid);
+        }
+
+        .svc-gallery-img-wrap::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid rgba(212, 175, 55, 0.24);
+            transform: translate(22px, 22px);
+            z-index: -1;
+            pointer-events: none;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.6s ease;
+        }
+
+        .svc-gallery-img-wrap:hover::after {
+            transform: translate(14px, 14px);
+            border-color: var(--gold);
+        }
+
+        .svc-gallery-img-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .svc-gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: saturate(0.68) brightness(0.85);
+            transition: transform 0.95s cubic-bezier(0.16, 1, 0.3, 1), filter 0.60s ease;
+        }
+
+        .svc-gallery-img-wrap:hover .svc-gallery-img {
+            transform: scale(1.04);
+            filter: saturate(0.95) brightness(0.95);
+        }
+
+        .svc-gallery-img-cap {
+            position: absolute;
+            bottom: -32px;
+            left: 22px;
+            font-family: 'Jost', sans-serif;
+            font-size: 8.5px;
+            font-weight: 300;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.28);
+        }
+
+        .svc-gallery-row:nth-child(even) .svc-gallery-img-cap {
+            left: auto;
+            right: 22px;
+        }
+
+        .svc-gallery-text-col {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .svc-gallery-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            font-weight: 300;
+            color: rgba(212, 175, 55, 0.16);
+            line-height: 1;
+            margin-bottom: -12px;
+        }
+
+        .svc-gallery-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 3vw, 3.4rem);
+            font-weight: 500;
+            color: var(--white);
+            line-height: 1.1;
+        }
+
+        .svc-gallery-title em {
+            font-style: italic;
+            font-weight: 300;
+            color: rgba(212, 175, 55, 0.82);
+        }
+
+        .svc-gallery-gold-rule {
+            width: 80px;
+            height: 1px;
+            background: linear-gradient(90deg, var(--gold) 0%, rgba(212, 175, 55, 0.18) 100%);
+        }
+
+        .svc-gallery-desc {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 300;
+            line-height: 1.86;
+            color: rgba(255, 255, 255, 0.48);
+        }
+
+        .svc-gallery-details {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 6px;
+        }
+
+        .svc-gallery-feat {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            font-family: 'Jost', sans-serif;
+            font-size: 0.80rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.42);
+            line-height: 1.5;
+        }
+
+        .svc-gallery-feat::before {
+            content: '';
+            width: 14px;
+            height: 1px;
+            background: var(--gold);
+            flex-shrink: 0;
+            margin-top: 0.65em;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 900px) {
+            .svc-galleries-inner { padding: 0 28px; gap: 90px; }
+            .svc-gallery-row { grid-template-columns: 1fr !important; gap: 48px; }
+            .svc-gallery-row:nth-child(even) .svc-gallery-img-col { order: 1; }
+            .svc-gallery-row:nth-child(even) .svc-gallery-text-col { order: 2; }
+            .svc-gallery-img-wrap::after { transform: translate(14px, 14px); }
+        }
+
+        /* ==============================
+           ARTISAN MATERIALS SHOWCASE
+        ============================== */
+        .svc-materials {
+            position: relative;
+            background: var(--navy-mid);
+            padding: 140px 0;
+            overflow: hidden;
+        }
+
+        .svc-materials-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('materials-bg.jpeg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.045;
+        }
+
+        .svc-materials-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 80px;
+        }
+
+        .svc-materials-header {
+            max-width: 680px;
+            margin-bottom: 72px;
+        }
+
+        .svc-materials-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .svc-material-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .svc-material-btn {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.018);
+            border: 1px solid rgba(212, 175, 55, 0.14);
+            color: rgba(255, 255, 255, 0.52);
+            text-align: left;
+            padding: 22px 28px;
+            cursor: pointer;
+            font-family: 'Jost', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+            transition: border-color 0.36s ease, color 0.36s ease, background 0.36s ease;
+        }
+
+        .svc-material-btn:hover {
+            border-color: rgba(212, 175, 55, 0.48);
+            color: var(--white);
+            background: rgba(212, 175, 55, 0.04);
+        }
+
+        .svc-material-btn.active {
+            border-color: var(--gold);
+            color: var(--navy);
+            background: var(--gold);
+            font-weight: 500;
+        }
+
+        .svc-material-display {
+            background: rgba(255, 255, 255, 0.015);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 52px;
+            clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+            min-height: 420px;
+            position: relative;
+            box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+            overflow: hidden;
+        }
+
+        .svc-material-display-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            pointer-events: none;
+        }
+
+        .svc-material-display-bg.active {
+            opacity: 1;
+        }
+
+        .svc-material-card {
+            display: none;
+            flex-direction: column;
+            gap: 24px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .svc-material-card.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .svc-material-title-row {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding-bottom: 18px;
+        }
+
+        .svc-material-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.4rem;
+            font-weight: 500;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .svc-material-origin {
+            font-family: 'Jost', sans-serif;
+            font-size: 8.5px;
+            font-weight: 400;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.34);
+        }
+
+        .svc-material-desc {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 300;
+            line-height: 1.86;
+            color: rgba(255, 255, 255, 0.46);
+        }
+
+        .svc-material-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 10px;
+        }
+
+        .svc-material-metric {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .svc-material-metric-label {
+            font-family: 'Jost', sans-serif;
+            font-size: 8.5px;
+            font-weight: 400;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: rgba(212, 175, 55, 0.6);
+        }
+
+        .svc-material-metric-val {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.90rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.76);
+        }
+
+        .svc-janka-track {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-top: 6px;
+        }
+
+        .svc-janka-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gold-dk), var(--gold));
+            border-radius: 2px;
+            width: 0;
+            transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @media (max-width: 900px) {
+            .svc-materials-inner { padding: 0 28px; }
+            .svc-materials-grid { grid-template-columns: 1fr; gap: 40px; }
+            .svc-material-display { padding: 28px; min-height: auto; }
+            .svc-material-metrics { grid-template-columns: 1fr; gap: 18px; }
+        }
+
+        /* ==============================
+           FAQ SECTION
+        ============================== */
+        .svc-faq {
+            position: relative;
+            background: var(--navy-mid);
+            padding: 130px 0;
+            overflow: hidden;
+        }
+
+        .svc-faq-ghost {
+            position: absolute;
+            bottom: -4%;
+            right: 4%;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28vw;
+            font-weight: 700;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(212, 175, 55, 0.03);
+            pointer-events: none;
+            line-height: 1;
+            user-select: none;
+        }
+
+        .svc-faq-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 80px;
+        }
+
+        .svc-faq-layout {
+            display: grid;
+            grid-template-columns: 0.75fr 1.25fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .svc-faq-sticky {
+            position: sticky;
+            top: 120px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .svc-faq-sticky p {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 300;
+            line-height: 1.88;
+            color: rgba(255, 255, 255, 0.44);
+        }
+
+        .svc-faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .svc-faq-item {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            overflow: hidden;
+        }
+
+        .svc-faq-item:last-child {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .svc-faq-q {
+            width: 100%;
+            background: transparent;
+            border: 0;
+            padding: 28px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            text-align: left;
+        }
+
+        .svc-faq-q-text {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            color: rgba(255, 255, 255, 0.68);
+            flex: 1;
+            transition: color 0.30s ease;
+            line-height: 1.5;
+        }
+
+        .svc-faq-item.open .svc-faq-q-text, .svc-faq-q:hover .svc-faq-q-text {
+            color: var(--white);
+        }
+
+        .svc-faq-toggle {
+            width: 28px;
+            height: 28px;
+            border: 1px solid rgba(212, 175, 55, 0.18);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.44s cubic-bezier(0.34, 1.2, 0.64, 1), border-color 0.32s ease, background 0.32s ease;
+        }
+
+        .svc-faq-item.open .svc-faq-toggle {
+            transform: rotate(45deg);
+            border-color: rgba(212, 175, 55, 0.50);
+            background: rgba(212, 175, 55, 0.06);
+        }
+
+        .svc-faq-toggle svg {
+            width: 12px;
+            height: 12px;
+            stroke: rgba(212, 175, 55, 0.55);
+            stroke-width: 1.6;
+            fill: none;
+        }
+
+        .svc-faq-ans-wrap {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .svc-faq-item.open .svc-faq-ans-wrap {
+            grid-template-rows: 1fr;
+        }
+
+        .svc-faq-ans-inner {
+            overflow: hidden;
+        }
+
+        .svc-faq-ans {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.86rem;
+            font-weight: 300;
+            line-height: 1.90;
+            color: rgba(255, 255, 255, 0.42);
+            padding: 0 0 28px 0;
+        }
+
+        @media (max-width: 1000px) {
+            .svc-faq-layout { grid-template-columns: 1fr; gap: 48px; }
+            .svc-faq-sticky { position: static; }
+        }
+
+        @media (max-width: 900px) {
+            .svc-faq-inner { padding: 0 28px; }
+        }
+
+        /* ==============================
+           CTA SECTION
+        ============================== */
+        .svc-cta {
+            position: relative;
+            background: var(--navy);
+            overflow: hidden;
+        }
+
+        .svc-cta-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('cta-bg.jpg');
+            background-size: cover;
+            background-position: center 35%;
+            opacity: 0.12;
+            filter: saturate(0.40);
+        }
+
+        .svc-cta-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.04) 0%, transparent 68%), linear-gradient(to bottom, var(--navy) 0%, transparent 18%, transparent 82%, var(--navy) 100%);
+        }
+
+        .svc-cta-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 130px 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .svc-cta-text {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .svc-cta-desc {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 300;
+            line-height: 1.90;
+            color: rgba(255, 255, 255, 0.46);
+            max-width: 460px;
+        }
+
+        .svc-cta-card {
+            background: rgba(255, 255, 255, 0.025);
+            border: 1px solid rgba(212, 175, 55, 0.14);
+            padding: 48px 44px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 40px 80px rgba(0, 0, 0, 0.30);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .svc-cta-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.30) 50%, transparent 100%);
+        }
+
+        .svc-cta-card-title {
+            font-family: 'Jost', sans-serif;
+            font-size: 9px;
+            font-weight: 500;
+            letter-spacing: 0.44em;
+            text-transform: uppercase;
+            color: rgba(212, 175, 55, 0.55);
+        }
+
+        .svc-cta-contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        .svc-cta-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .svc-cta-contact-icon {
+            width: 32px;
+            height: 32px;
+            border: 1px solid rgba(212, 175, 55, 0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .svc-cta-contact-icon svg {
+            width: 14px;
+            height: 14px;
+            stroke: rgba(212, 175, 55, 0.55);
+            stroke-width: 1.4;
+            fill: none;
+        }
+
+        .svc-cta-contact-body {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .svc-cta-contact-label {
+            font-family: 'Jost', sans-serif;
+            font-size: 8.5px;
+            font-weight: 300;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.28);
+        }
+
+        .svc-cta-contact-val {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.72);
+            text-decoration: none;
+            transition: color 0.28s ease;
+        }
+
+        .svc-cta-contact-val:hover {
+            color: var(--gold);
+        }
+
+        .svc-cta-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .svc-btn-primary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            text-decoration: none;
+            font-family: 'Jost', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.36em;
+            text-transform: uppercase;
+            color: var(--navy);
+            background: var(--gold);
+            padding: 16px 28px;
+            clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+            transition: background 0.30s ease;
+        }
+
+        .svc-btn-primary:hover {
+            background: var(--gold-lt);
+        }
+
+        .svc-btn-primary svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--navy);
+            stroke-width: 1.6;
+            fill: none;
+            flex-shrink: 0;
+        }
+
+        .svc-btn-ghost {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            font-family: 'Jost', sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            letter-spacing: 0.36em;
+            text-transform: uppercase;
+            color: rgba(212, 175, 55, 0.65);
+            border: 1px solid rgba(212, 175, 55, 0.22);
+            padding: 15px 28px;
+            clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+            transition: border-color 0.30s ease, color 0.30s ease, background 0.30s ease;
+        }
+
+        .svc-btn-ghost:hover {
+            border-color: rgba(212, 175, 55, 0.55);
+            color: rgba(212, 175, 55, 0.90);
+            background: rgba(212, 175, 55, 0.04);
+        }
+
+        @media (max-width: 900px) {
+            .svc-cta-inner { grid-template-columns: 1fr; padding: 80px 28px; gap: 48px; }
+        }
+
+        /* ==============================
+           SITE FOOTER (from index.html)
+        ============================== */
+        .site-footer {
+            position: relative;
+            z-index: 10;
+            overflow: hidden;
+            background: linear-gradient(180deg, #08152A 0%, #040B1E 58%, #020614 100%);
+            border-top: 1px solid rgba(212, 175, 55, 0.16);
+            color: var(--white);
+            isolation: isolate;
+        }
+
+        .footer-rail {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            z-index: 0;
+            width: 1px;
+            height: 100%;
+            pointer-events: none;
+            background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.18), transparent);
+            opacity: 0.45;
+        }
+
+        .footer-shell {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 42px 70px 18px;
+        }
+
+        .footer-topline {
+            width: 0;
+            height: 1px;
+            margin-bottom: 26px;
+            background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.18) 8%, rgba(240, 214, 104, 0.76) 36%, rgba(61, 207, 191, 0.20) 72%, transparent 100%);
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.18);
+            transition: width 1.05s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .site-footer.vis .footer-topline {
+            width: 100%;
+        }
+
+        .footer-main {
+            display: grid;
+            grid-template-columns: minmax(230px, 0.72fr) minmax(520px, 1.28fr);
+            gap: clamp(26px, 4.5vw, 70px);
+            align-items: stretch;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .footer-mark {
+            width: 58px;
+            height: 58px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(212, 175, 55, 0.22);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.018);
+            box-shadow: 0 18px 42px rgba(0, 0, 0, 0.26);
+        }
+
+        .footer-mark img {
+            width: 38px;
+            height: 38px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.16));
+        }
+
+        .footer-brand h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.6rem, 4.8vw, 5.6rem);
+            line-height: 0.84;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            margin: 0;
+            max-width: 420px;
+            background: linear-gradient(150deg, #fff 0%, #F0D668 44%, #9B741B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-brand-copy {
+            max-width: 380px;
+            margin: 0;
+            font-family: 'Jost', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 300;
+            line-height: 1.55;
+            color: rgba(255, 255, 255, 0.50);
+        }
+
+        .footer-coordinate {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            width: fit-content;
+            color: rgba(255, 255, 255, 0.52);
+            text-decoration: none;
+            font-size: 0.66rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            transition: color 0.35s ease, transform 0.35s ease;
+        }
+
+        .footer-coordinate::before {
+            content: '';
+            width: 34px;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.82), rgba(61, 207, 191, 0.20));
+        }
+
+        .footer-coordinate:hover {
+            color: var(--gold-lt);
+            transform: translateX(4px);
+        }
+
+        .footer-secondary-mark {
+            display: block;
+            width: 140px;
+            height: auto;
+            margin-top: 22px;
+            opacity: 0.82;
+            filter: brightness(1.02) drop-shadow(0 0 8px rgba(212, 175, 55, 0.12));
+            transition: opacity 0.4s ease, filter 0.4s ease, transform 0.4s ease;
+        }
+
+        .footer-secondary-mark:hover {
+            opacity: 1;
+            filter: brightness(1.15) drop-shadow(0 0 16px rgba(212, 175, 55, 0.32));
+            transform: translateY(-2px);
+        }
+
+        .footer-ledger {
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(260px, 0.88fr) minmax(330px, 1.12fr);
+            gap: 20px;
+            align-items: stretch;
+            border-top: 1px solid rgba(212, 175, 55, 0.18);
+            background: rgba(255, 255, 255, 0.012);
+            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+        }
+
+        .footer-ledger::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 0;
+            pointer-events: none;
+            background: linear-gradient(to bottom, var(--gold-lt), transparent);
+            box-shadow: 0 0 14px rgba(212, 175, 55, 0.24);
+            transition: height 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.25s;
+        }
+
+        .site-footer.vis .footer-ledger::after {
+            height: 100%;
+        }
+
+        .footer-location-card, .footer-team {
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-location-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 212px;
+            margin: 14px 0 14px 14px;
+            padding: 22px 24px;
+            border: 1px solid rgba(212, 175, 55, 0.26);
+            border-radius: 0;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.055), rgba(255, 255, 255, 0.014));
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
+        }
+
+        .footer-team {
+            padding: 22px 28px 22px 0;
+        }
+
+        .footer-kicker {
+            display: block;
+            margin-bottom: 13px;
+            font-size: 8px;
+            font-weight: 500;
+            letter-spacing: 0.42em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .footer-address {
+            margin: 0 0 16px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.35rem, 2vw, 2rem);
+            line-height: 1.03;
+            color: rgba(255, 255, 255, 0.86);
+        }
+
+        .footer-address span {
+            color: rgba(255, 255, 255, 0.46);
+            font-size: 0.74em;
+        }
+
+        .footer-map-link, .footer-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            width: fit-content;
+            font-size: 0.68rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.52);
+            transition: color 0.35s ease, transform 0.35s ease;
+            cursor: pointer;
+        }
+
+        .footer-phone {
+            margin-top: 10px;
+            color: rgba(240, 214, 104, 0.78);
+        }
+
+        .footer-map-link::before, .footer-phone::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border: 1px solid rgba(212, 175, 55, 0.48);
+            border-radius: 50%;
+        }
+
+        .footer-map-link:hover, .footer-phone:hover {
+            color: var(--gold-lt);
+            transform: translateX(4px);
+        }
+
+        .footer-team-title {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 14px;
+        }
+
+        .footer-team-title h3 {
+            margin: 0;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.65rem, 2.35vw, 2.55rem);
+            font-weight: 500;
+            line-height: 0.94;
+            color: rgba(255, 255, 255, 0.88);
+        }
+
+        .footer-team-title span {
+            padding-top: 5px;
+            font-size: 8px;
+            font-weight: 500;
+            letter-spacing: 0.34em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.32);
+            white-space: nowrap;
+        }
+
+        .footer-people {
+            display: grid;
+            gap: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.075);
+        }
+
+        .footer-person {
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(112px, 0.72fr) minmax(190px, 1fr);
+            gap: 18px;
+            padding: 13px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+        }
+
+        .footer-person::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 0;
+            height: 1px;
+            background: linear-gradient(90deg, var(--gold-lt), rgba(61, 207, 191, 0.18), transparent);
+            transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .footer-person:hover::before {
+            width: 100%;
+        }
+
+        .footer-person-name {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            font-family: 'Jost', sans-serif;
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.82);
+        }
+
+        .footer-person-name small {
+            font-size: 7.5px;
+            letter-spacing: 0.34em;
+            text-transform: uppercase;
+            color: rgba(212, 175, 55, 0.70);
+        }
+
+        .footer-person a {
+            justify-self: end;
+            align-self: center;
+            font-size: 0.76rem;
+            font-weight: 300;
+            letter-spacing: 0.045em;
+            color: rgba(255, 255, 255, 0.54);
+            text-decoration: none;
+            transition: color 0.35s ease, letter-spacing 0.35s ease;
+        }
+
+        .footer-person a:hover {
+            color: var(--gold-lt);
+            letter-spacing: 0.08em;
+        }
+
+        .footer-bottom {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+            align-items: center;
+            gap: 22px;
+            margin-top: 26px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            color: rgba(255, 255, 255, 0.34);
+            font-size: 0.66rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .footer-credit {
+            justify-self: center;
+            color: rgba(255, 255, 255, 0.36);
+            white-space: nowrap;
+        }
+
+        .footer-credit a {
+            display: inline-block;
+            color: #E4AE56;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+            transform-origin: center;
+        }
+
+        .footer-credit a:hover {
+            color: #F0D668;
+            transform: scale(1.06);
+            text-shadow: 0 0 14px rgba(240, 214, 104, 0.20);
+        }
+
+        .footer-mini-nav {
+            justify-self: end;
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        .footer-mini-nav a {
+            color: rgba(255, 255, 255, 0.38);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-mini-nav a:hover {
+            color: var(--gold-lt);
+        }
+
+        .footer-reveal {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 0.72s cubic-bezier(0.16, 1, 0.3, 1), transform 0.72s cubic-bezier(0.16, 1, 0.3, 1);
+            transition-delay: var(--fdelay, 0s);
+        }
+
+        .site-footer.vis .footer-reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 1100px) {
+            .footer-shell { padding: 38px 44px 18px; }
+            .footer-main, .footer-ledger { grid-template-columns: 1fr; }
+            .footer-brand { justify-content: flex-start; }
+            .footer-location-card { min-height: auto; margin: 14px 14px 0; }
+            .footer-team { padding: 20px 28px 24px; }
+            .footer-rail { display: none; }
+            .footer-bottom { grid-template-columns: 1fr; gap: 12px; text-align: center; }
+            .footer-credit, .footer-mini-nav { justify-self: center; }
+        }
+
+        /* ==============================
+           BACK TO TOP + CURSOR GLOW
+        ============================== */
+        .svc-btt {
+            position: fixed;
+            bottom: 36px;
+            right: 36px;
+            z-index: 9000;
+            width: 44px;
+            height: 44px;
+            background: rgba(4, 9, 28, 0.88);
+            border: 1px solid rgba(212, 175, 55, 0.22);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(12px);
+            transition: opacity 0.36s ease, transform 0.36s ease, background 0.28s ease, border-color 0.28s ease;
+            backdrop-filter: blur(8px);
+        }
+
+        .svc-btt.visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        .svc-btt:hover {
+            background: rgba(212, 175, 55, 0.14);
+            border-color: rgba(212, 175, 55, 0.50);
+        }
+
+        .svc-btt svg {
+            width: 16px;
+            height: 16px;
+            stroke: rgba(212, 175, 55, 0.65);
+            stroke-width: 1.5;
+            fill: none;
+            transition: stroke 0.28s ease;
+        }
+
+        .svc-btt:hover svg {
+            stroke: rgba(212, 175, 55, 0.95);
+        }
+
+        .cursor-glow {
+            position: fixed;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.04) 0%, transparent 72%);
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        @media (hover: hover) {
+            .cursor-glow { opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- //Cursor Glow Ambient Effect// -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- //Sticky Return Logo Button (matches index.html)// -->
+    <a class="sticky-logo-btn" id="stickyLogo" href="index.html" aria-label="Return to Home">
+        <img src="sj-logo.png" alt="Schröder's Joinery Logo">
+    </a>
+
+    <!-- //Sticky Hamburger Menu Trigger (matches index.html)// -->
+    <button class="hero-mobile-toggle" id="heroMobileToggle" type="button" aria-expanded="false" aria-controls="heroMobileNav" aria-label="Open site navigation">
+        <span class="hero-mobile-toggle-core" aria-hidden="true">
+            <span class="hero-mobile-line hero-mobile-line-top"></span>
+            <span class="hero-mobile-line hero-mobile-line-mid"></span>
+            <span class="hero-mobile-line hero-mobile-line-bot"></span>
+        </span>
+    </button>
+
+    <!-- //Mobile Menu Drawer (matches index.html)// -->
+    <div class="hero-mobile-nav" id="heroMobileNav" hidden>
+        <button class="hero-mobile-nav-backdrop" type="button" aria-label="Close site navigation" data-mobile-nav-close></button>
+        <nav class="hero-mobile-nav-panel" aria-label="Mobile site navigation">
+            <div class="hero-mobile-nav-links">
+                <a class="hero-mobile-link" href="index.html#svcSection"><span>Services</span></a>
+                <a class="hero-mobile-link" href="#materialsSection"><span>Materials</span></a>
+                <a class="hero-mobile-link" href="index.html#portfolioSection"><span>Portfolio</span></a>
+                <a class="hero-mobile-link" href="index.html#storySection"><span>Our Story</span></a>
+                <a class="hero-mobile-link" href="index.html#contactSection"><span>Contact Us</span></a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- //Page Hero Section// -->
+    <section class="pg-hero" id="heroSection">
+        <!-- Background Imagery -->
+        <div class="pg-hero-bg"></div>
+
+        <!-- Overlays -->
+        <div class="pg-hero-vignette"></div>
+        <div class="pg-hero-diag"></div>
+        <div class="pg-hero-grain"></div>
+
+        <!-- Floating Particles -->
+        <div class="pg-hero-dust" id="heroDust"></div>
+
+
+
+        <!-- Desktop Navigation Rail (matches index.html styling) -->
+        <nav class="hero-nav" aria-label="Site navigation">
+            <a class="h-nav-item" href="index.html#svcSection"><span>Services</span></a>
+            <a class="h-nav-item" href="#materialsSection"><span>Materials</span></a>
+            <a class="h-nav-item" href="index.html#portfolioSection"><span>Portfolio</span></a>
+            <a class="h-nav-item" href="index.html#storySection"><span>Our Story</span></a>
+            <a class="h-nav-item" href="index.html#contactSection"><span>Contact Us</span></a>
+        </nav>
+
+        <!-- Social Media Rail (matches index.html) -->
+        <div class="hero-social-rail" aria-label="Social media links">
+            <a class="hero-social-tab is-facebook" href="https://www.facebook.com/schrodersjoinery/" target="_blank" rel="noopener" aria-label="Schroder's Joinery on Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M13.32 21v-8.2h2.76l.41-3.2h-3.17V7.56c0-.93.26-1.56 1.58-1.56h1.69V3.14C15.78 3.05 15.04 3 14.18 3c-2.53 0-4.26 1.54-4.26 4.39V9.6H7.05v3.2h2.87V21h3.4z" />
+                </svg>
+            </a>
+            <a class="hero-social-tab is-instagram" href="https://www.instagram.com/schroders_joinery/" target="_blank" rel="noopener" aria-label="Schroder's Joinery on Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 1.8A3.7 3.7 0 0 0 3.8 7.5v9a3.7 3.7 0 0 0 3.7 3.7h9a3.7 3.7 0 0 0 3.7-3.7v-9a3.7 3.7 0 0 0-3.7-3.7h-9zm9.68 1.34a1.08 1.08 0 1 1 0 2.16 1.08 1.08 0 0 1 0-2.16zM12 6.6A5.4 5.4 0 1 1 6.6 12 5.4 5.4 0 0 1 12 6.6zm0 1.8A3.6 3.6 0 1 0 15.6 12 3.6 3.6 0 0 0 12 8.4z" />
+                </svg>
+            </a>
+            <a class="hero-social-tab is-linkedin" href="https://za.linkedin.com/company/schr%C3%B6ders-joinery" target="_blank" rel="noopener" aria-label="Schroder's Joinery on LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5.4 8.4A1.95 1.95 0 1 1 5.39 4.5 1.95 1.95 0 0 1 5.4 8.4zM3.74 9.77h3.31V20.5H3.74zm5.38 0h3.18v1.47h.05c.44-.84 1.53-1.73 3.15-1.73 3.36 0 3.98 2.21 3.98 5.08v5.9h-3.31v-5.23c0-1.25-.02-2.85-1.73-2.85-1.73 0-2 1.35-2 2.75v5.33H9.12V9.77z" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- Copy -->
+        <div class="pg-hero-copy">
+            <span class="pg-hero-eyebrow">Bespoke Design</span>
+            <nav class="pg-hero-breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="sep">/</span>
+                <span class="current">Services</span>
+            </nav>
+            <h1 class="pg-hero-title">Services</h1>
+            <p class="pg-hero-sub">Mastering structural lines, respecting the timber.</p>
+            <p class="pg-hero-desc">We design, manufacture, and install architectural woodwork tailored to the layout of high-end homes and commercial studios.</p>
+        </div>
+    </section>
+
+    <!-- //Unified Content Wrapper to scroll over sticky hero// -->
+    <div class="pg-content-wrap">
+
+        <!-- //The Design Process (From Render to Reality)// -->
+        <section class="svc-process" id="processSection">
+        <div class="svc-process-ghost" aria-hidden="true">CRAFT</div>
+        <div class="svc-process-inner">
+            <span class="svc-section-eyebrow">The Evolution</span>
+            <h2 class="svc-section-title">From Render<br>to <em>Reality</em></h2>
+            <div class="svc-gold-rule sv-reveal-left"></div>
+
+            <div class="svc-process-grid">
+                <div class="svc-proc-text sv-reveal">
+                    <p>At Schröder’s Joinery, we reject the notion of simple flat-pack assembly. Every commission represents a rigorous dialogue between client, designer, and craftsman.</p>
+                    <p class="accent">We translate empty architectural volumes into fully realized spatial narratives, ensuring that form matches your daily routines and materials endure.</p>
+                    <p>Our workshop merges modern computer-aided layouts with heritage woodworking joints to deliver projects that look custom and feel inevitable.</p>
+                    <div class="svc-proc-img-wrap">
+                        <img src="architecture.jpeg" alt="Architectural design and workspace joinery rendering" class="svc-proc-img" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="svc-proc-steps">
+                    <!-- Step 1 -->
+                    <div class="svc-proc-step sv-reveal" style="transition-delay: 0.1s;">
+                        <span class="svc-proc-step-num">01</span>
+                        <div class="svc-proc-step-body">
+                            <h3 class="svc-proc-step-title">Design Consultation</h3>
+                            <p class="svc-proc-step-desc">We meet in your space to analyze illumination, ergonomics, and structural boundaries. This establishes the material scope and aesthetic parameters.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="svc-proc-step sv-reveal" style="transition-delay: 0.2s;">
+                        <span class="svc-proc-step-num">02</span>
+                        <div class="svc-proc-step-body">
+                            <h3 class="svc-proc-step-title">3D Modeling & Rendering</h3>
+                            <p class="svc-proc-step-desc">Our design studio maps the custom layout to scale. We supply high-resolution visual models and precise elevation layouts for your approval.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="svc-proc-step sv-reveal" style="transition-delay: 0.3s;">
+                        <span class="svc-proc-step-num">03</span>
+                        <div class="svc-proc-step-body">
+                            <h3 class="svc-proc-step-title">Artisan Sourcing & Manufacture</h3>
+                            <p class="svc-proc-step-desc">Timber species are selected for grain direction and density. In our Kyalami workshop, components are detailed, joined, and dry-assembled under owner supervision.</p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="svc-proc-step sv-reveal" style="transition-delay: 0.4s;">
+                        <span class="svc-proc-step-num">04</span>
+                        <div class="svc-proc-step-body">
+                            <h3 class="svc-proc-step-title">Precision On-Site Fitment</h3>
+                            <p class="svc-proc-step-desc">We carry out the final installation with white-glove care, ensuring flush shadowlines, soft-close alignment, and respect for finished surfaces.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- //Bespoke Service Galleries (Asymmetric Editorial Layout)// -->
+    <section class="svc-galleries" id="galleriesSection">
+        <div class="svc-galleries-inner">
+
+            <!-- 01 Kitchens -->
+            <div class="svc-gallery-row">
+                <div class="svc-gallery-img-col sv-reveal-left">
+                    <div class="svc-gallery-img-wrap">
+                        <div class="svc-gallery-img-container">
+                            <img src="kitchens.jpg" alt="Bespoke custom kitchens by Schröder's Joinery" class="svc-gallery-img" loading="lazy">
+                        </div>
+                        <span class="svc-gallery-img-cap">Kyalami Residence Kitchen</span>
+                    </div>
+                </div>
+                <div class="svc-gallery-text-col sv-reveal-right">
+                    <span class="svc-gallery-number">01</span>
+                    <h2 class="svc-gallery-title">Custom <em>Kitchens</em></h2>
+                    <div class="svc-gallery-gold-rule"></div>
+                    <p class="svc-gallery-desc">Bespoke culinary spaces designed around the mechanics of food prep, gathering, and home flow. We bypass off-the-shelf cabinets to sculpt layouts that balance premium timber panels, stone counters, and concealed appliance systems.</p>
+                    <div class="svc-gallery-details">
+                        <div class="svc-gallery-feat">Solid hardwood elements and premium grade matching veneers</div>
+                        <div class="svc-gallery-feat">Integrated drawer organizations and walk-in pantry systems</div>
+                        <div class="svc-gallery-feat">Premium German runner hardware and heavy-duty concealed hinges</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 02 Cabinetry -->
+            <div class="svc-gallery-row">
+                <div class="svc-gallery-text-col sv-reveal-left">
+                    <span class="svc-gallery-number">02</span>
+                    <h2 class="svc-gallery-title">Fitted <em>Cabinetry</em></h2>
+                    <div class="svc-gallery-gold-rule"></div>
+                    <p class="svc-gallery-desc">Tailored wardrobes, media consoles, and display shelving constructed to align flush with your home’s walls and cornices. We emphasize seamless joinery joints that keep storage secondary to the architecture of the space.</p>
+                    <div class="svc-gallery-details">
+                        <div class="svc-gallery-feat">Wall-to-wall fitted master wardrobes with custom internal divisions</div>
+                        <div class="svc-gallery-feat">Floating media cabinets with hidden cable channels and acoustic vents</div>
+                        <div class="svc-gallery-feat">Warm integrated LED profile lighting with concealed pressure triggers</div>
+                    </div>
+                </div>
+                <div class="svc-gallery-img-col sv-reveal-right">
+                    <div class="svc-gallery-img-wrap">
+                        <div class="svc-gallery-img-container">
+                            <img src="cabinetry.jpg" alt="Fitted cabinetry woodwork details" class="svc-gallery-img" loading="lazy">
+                        </div>
+                        <span class="svc-gallery-img-cap">Minimalist Timber Wardrobes</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 03 Offices -->
+            <div class="svc-gallery-row">
+                <div class="svc-gallery-img-col sv-reveal-left">
+                    <div class="svc-gallery-img-wrap">
+                        <div class="svc-gallery-img-container">
+                            <img src="offices.jpg" alt="Architectural home office workspace custom joinery" class="svc-gallery-img" loading="lazy">
+                        </div>
+                        <span class="svc-gallery-img-cap">Executive Boardroom Fitout</span>
+                    </div>
+                </div>
+                <div class="svc-gallery-text-col sv-reveal-right">
+                    <span class="svc-gallery-number">03</span>
+                    <h2 class="svc-gallery-title">Office <em>Fitouts</em></h2>
+                    <div class="svc-gallery-gold-rule"></div>
+                    <p class="svc-gallery-desc">Productive studio spaces and executive suites configured to enhance clarity. We integrate wire routes directly inside solid desks, construct floor-to-ceiling book racks, and construct matching acoustic timber wall slats.</p>
+                    <div class="svc-gallery-details">
+                        <div class="svc-gallery-feat">Custom desks with flush-set power outlets and leather/wood inlay</div>
+                        <div class="svc-gallery-feat">Heavy-load library shelving systems with concealed steel supports</div>
+                        <div class="svc-gallery-feat">Wall slats in natural oak or walnut for sound absorption and warmth</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 04 Bespoke Furniture -->
+            <div class="svc-gallery-row">
+                <div class="svc-gallery-text-col sv-reveal-left">
+                    <span class="svc-gallery-number">04</span>
+                    <h2 class="svc-gallery-title">Bespoke <em>Furniture</em></h2>
+                    <div class="svc-gallery-gold-rule"></div>
+                    <p class="svc-gallery-desc">One-of-a-kind dining tables, server units, and sideboards shaped from hand-selected raw slabs. These are heirloom pieces built using traditional mortise-and-tenon joints that withstand generations of use.</p>
+                    <div class="svc-gallery-details">
+                        <div class="svc-gallery-feat">Large-format solid timber dining tables with grain-matched tops</div>
+                        <div class="svc-gallery-feat">Custom sideboards finished with hard-wearing natural oil and wax</div>
+                        <div class="svc-gallery-feat">Hand-machined dovetails and custom brass or steel hardware integrations</div>
+                    </div>
+                </div>
+                <div class="svc-gallery-img-col sv-reveal-right">
+                    <div class="svc-gallery-img-wrap">
+                        <div class="svc-gallery-img-container">
+                            <img src="furniture.jpg" alt="Hand-crafted bespoke furniture" class="svc-gallery-img" loading="lazy">
+                        </div>
+                        <span class="svc-gallery-img-cap">Hardwood Server Unit</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 05 Bathrooms -->
+            <div class="svc-gallery-row">
+                <div class="svc-gallery-img-col sv-reveal-left">
+                    <div class="svc-gallery-img-wrap">
+                        <div class="svc-gallery-img-container">
+                            <img src="bathrooms.jpg" alt="Luxury wood bathroom vanities custom designs" class="svc-gallery-img" loading="lazy">
+                        </div>
+                        <span class="svc-gallery-img-cap">Bespoke Floating Vanity</span>
+                    </div>
+                </div>
+                <div class="svc-gallery-text-col sv-reveal-right">
+                    <span class="svc-gallery-number">05</span>
+                    <h2 class="svc-gallery-title">Luxury <em>Bathrooms</em></h2>
+                    <div class="svc-gallery-gold-rule"></div>
+                    <p class="svc-gallery-desc">Sanctuaries of restoration requiring specialist wood sealants. We manufacture floating vanity units, custom mirror trims, and structural cabinetry designed to withstand direct moisture exposure.</p>
+                    <div class="svc-gallery-details">
+                        <div class="svc-gallery-feat">Moisture-resistant composite substrates sealed in timber veneers</div>
+                        <div class="svc-gallery-feat">Under-mount basins with integrated stone surrounds and wood trims</div>
+                        <div class="svc-gallery-feat">Concealed internal drawer partitions with water-sealed coatings</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 06 Interiors -->
+            <div class="svc-gallery-row">
+                <div class="svc-gallery-text-col sv-reveal-left">
+                    <span class="svc-gallery-number">06</span>
+                    <h2 class="svc-gallery-title">Architectural <em>Interiors</em></h2>
+                    <div class="svc-gallery-gold-rule"></div>
+                    <p class="svc-gallery-desc">Cohesive spatial design where wood interfaces with drywall, plaster, and steel. From wall cladding and bespoke internal doors to custom ceiling lattices, we coordinate panels across multiple rooms.</p>
+                    <div class="svc-gallery-details">
+                        <div class="svc-gallery-feat">Bespoke wall paneling with flush doors and invisible pivot hinges</div>
+                        <div class="svc-gallery-feat">Architectural ceiling beams and decorative screen grids</div>
+                        <div class="svc-gallery-feat">Cohesive material mapping across living, dining, and entrance halls</div>
+                    </div>
+                </div>
+                <div class="svc-gallery-img-col sv-reveal-right">
+                    <div class="svc-gallery-img-wrap">
+                        <div class="svc-gallery-img-container">
+                            <img src="interiors.jpg" alt="Custom architectural timber wall paneling and interior design joinery" class="svc-gallery-img" loading="lazy">
+                        </div>
+                        <span class="svc-gallery-img-cap">Midrand Entrance Portal</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- //Artisan Materials Showcase Section// -->
+    <section class="svc-materials" id="materialsSection">
+        <div class="svc-materials-bg"></div>
+        <div class="svc-materials-inner">
+            <div class="svc-materials-header sv-reveal-left">
+                <span class="svc-section-eyebrow">The Collection</span>
+                <h2 class="svc-section-title">Artisan <em>Materials</em></h2>
+                <div class="svc-gold-rule vis"></div>
+                <p class="svc-gallery-desc" style="max-width: 520px; margin-top: 20px;">A bespoke design is only as timeless as the timber it is built from. We select and secure premium, furniture-grade hardwoods suited to our South African climate.</p>
+            </div>
+
+            <div class="svc-materials-grid">
+                <!-- Navigation -->
+                <div class="svc-material-nav sv-reveal-left">
+                    <button class="svc-material-btn active" data-material="oak">American White Oak</button>
+                    <button class="svc-material-btn" data-material="mahogany">Bespoke Mahogany</button>
+                    <button class="svc-material-btn" data-material="maple">American Maple</button>
+                    <button class="svc-material-btn" data-material="kiaat">African Kiaat</button>
+                </div>
+
+                <!-- Display Screen -->
+                <div class="svc-material-display sv-reveal-right">
+                    <!-- Background Images with Gradient Overlay -->
+                    <div class="svc-material-display-bg mat-bg-oak active" style="background-image: linear-gradient(135deg, rgba(6, 13, 40, 0.85) 0%, rgba(4, 9, 28, 0.92) 100%), url('oak.png');"></div>
+                    <div class="svc-material-display-bg mat-bg-mahogany" style="background-image: linear-gradient(135deg, rgba(6, 13, 40, 0.85) 0%, rgba(4, 9, 28, 0.92) 100%), url('mahogany.png');"></div>
+                    <div class="svc-material-display-bg mat-bg-maple" style="background-image: linear-gradient(135deg, rgba(6, 13, 40, 0.85) 0%, rgba(4, 9, 28, 0.92) 100%), url('maple.png');"></div>
+                    <div class="svc-material-display-bg mat-bg-kiaat" style="background-image: linear-gradient(135deg, rgba(6, 13, 40, 0.85) 0%, rgba(4, 9, 28, 0.92) 100%), url('kiaat.png');"></div>
+
+                    <!-- Oak Card -->
+                    <div class="svc-material-card active" id="mat-oak">
+                        <div class="svc-material-title-row">
+                            <h3 class="svc-material-name">American White Oak</h3>
+                            <span class="svc-material-origin">Origin: North America</span>
+                        </div>
+                        <p class="svc-material-desc">Oak is a hard, heavy wood characterized by a coarse texture and highly prominent floral grain lines. Highly rot-resistant, it represents a strong, economical, and stable material. We value oak for its exceptional stainability — it takes oils and stains beautifully, allowing us to highlight its distinct growth ring pattern to suit your room's color scheme.</p>
+                        <div class="svc-material-metrics">
+                            <div class="svc-material-metric">
+                                <span class="svc-material-metric-label">Grain Profile</span>
+                                <span class="svc-material-metric-val">Coarse, floral, and highly open-pored</span>
+                            </div>
+                            <div class="svc-material-metric">
+                                <span class="svc-material-metric-label">Hardness (Janka Scale)</span>
+                                <span class="svc-material-metric-val">1,290 lbf (Hard & Durable)</span>
+                                <div class="svc-janka-track"><div class="svc-janka-fill" style="width: 65%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mahogany Card -->
+                    <div class="svc-material-card" id="mat-mahogany">
+                        <div class="svc-material-title-row">
+                            <h3 class="svc-material-name">Bespoke Mahogany</h3>
+                            <span class="svc-material-origin">Origin: Asia & South America</span>
+                        </div>
+                        <p class="svc-material-desc">Mahogany is a classic hardwood with a reddish-brown color that naturally darkens over time when sealed. Featuring a subtle, fine, and straight grain, its texture is less dramatic and pleasing to the eye. It is highly valued for traditional furniture, executive boardroom tables, and decorative cladding where visual warmth and stability are required.</p>
+                        <div class="svc-material-metrics">
+                            <div class="svc-material-metric">
+                                <span class="svc-material-metric-label">Grain Profile</span>
+                                <span class="svc-material-metric-val">Fine, uniform, straight, and low-contrast</span>
+                            </div>
+                            <div class="svc-material-metric">
+                                <span class="svc-material-metric-label">Hardness (Janka Scale)</span>
+                                <span class="svc-material-metric-val">800 lbf (Medium Hardness)</span>
+                                <div class="svc-janka-track"><div class="svc-janka-fill" style="width: 40%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maple Card -->
+                    <div class="svc-material-card" id="mat-maple">
+                        <div class="svc-material-title-row">
+                            <h3 class="svc-material-name">American Maple</h3>
+                            <span class="svc-material-origin">Origin: North America</span>
+                        </div>
+                        <p class="svc-material-desc">Maple is a very hard, heavy, and dense hardwood. Known for its light cream color and subtle brown growth lines, it yields a bright, clean, and modern finish. Due to its exceptional density and wear resistance, maple is perfect for high-traffic custom kitchen surfaces, floating worktops, and internal drawers requiring long-term durability.</p>
+                        <div class="svc-material-metrics">
+                            <div class="svc-material-metric">
+                                <span class="svc-material-metric-label">Grain Profile</span>
+                                <span class="svc-material-metric-val">Fine, tight, straight, with minimal texture</span>
+                            </div>
+                            <div class="svc-material-metric">
+                                <span class="svc-material-metric-label">Hardness (Janka Scale)</span>
+                                <span class="svc-material-metric-val">1,450 lbf (Extremely Hard)</span>
+                                <div class="svc-janka-track"><div class="svc-janka-fill" style="width: 72%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kiaat Card -->
+                    <div class="svc-material-card" id="mat-kiaat">
+                        <div class="svc-material-title-row">
+                            <h3 class="svc-material-name">African Kiaat</h3>
+                            <span class="svc-material-origin">Origin: Central & Southern Africa</span>
+                        </div>
+                        <p class="svc-material-desc">Kiaat (also known as African Teak or Mukwa) is a highly sought-after local hardwood. It displays a dark brown heartwood contrasted with golden streaks of light-colored sapwood running through the grain. This makes a highly distinct and striking visual pattern. Very durable, and naturally borer and termite resistant, Kiaat is ideal for bespoke furniture that makes a bold, native statement.</p>
+                        <div class="svc-material-metrics">
+                            <div class="svc-material-metric">
+                                <span class="svc-material-metric-label">Grain Profile</span>
+                                <span class="svc-material-metric-val">Wavy, high-contrast, bold sapwood streaks</span>
+                            </div>
+                            <div class="svc-material-metric">
+                                <span class="svc-material-metric-label">Hardness (Janka Scale)</span>
+                                <span class="svc-material-metric-val">1,070 lbf (Durable & Resilient)</span>
+                                <div class="svc-janka-track"><div class="svc-janka-fill" style="width: 54%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- //Interactive FAQ Section// -->
+    <section class="svc-faq" id="faqSection">
+        <div class="svc-faq-ghost" aria-hidden="true">FAQ</div>
+        <div class="svc-faq-inner">
+            <div class="svc-faq-layout">
+                <div class="svc-faq-sticky sv-reveal-left">
+                    <span class="svc-section-eyebrow">Clear Answers</span>
+                    <h2 class="svc-section-title">Frequently<br>Asked <em>Questions</em></h2>
+                    <div class="svc-gold-rule vis"></div>
+                    <p>Understanding the custom joinery process from initial measurements to installation leads to smooth project delivery.</p>
+                </div>
+
+                <div class="svc-faq-list sv-reveal-right">
+                    <!-- Q1 -->
+                    <div class="svc-faq-item">
+                        <button class="svc-faq-q" type="button" aria-expanded="false" id="faq-q-1">
+                            <span class="svc-faq-q-text">Do you charge for spatial design consultations?</span>
+                            <div class="svc-faq-toggle">
+                                <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>
+                            </div>
+                        </button>
+                        <div class="svc-faq-ans-wrap" aria-labelledby="faq-q-1">
+                            <div class="svc-faq-ans-inner">
+                                <p class="svc-faq-ans">Initial site visits and high-level brief meetings are free within Gauteng. For detailed 3D spatial visual renderings and technically detailed construction maps, we charge a design deposit. This deposit is fully credited against your final project production quote upon project kick-off.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="svc-faq-item">
+                        <button class="svc-faq-q" type="button" aria-expanded="false" id="faq-q-2">
+                            <span class="svc-faq-q-text">What is your typical project lead time?</span>
+                            <div class="svc-faq-toggle">
+                                <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>
+                            </div>
+                        </button>
+                        <div class="svc-faq-ans-wrap" aria-labelledby="faq-q-2">
+                            <div class="svc-faq-ans-inner">
+                                <p class="svc-faq-ans">A typical custom kitchen or full bedroom fitout requires 6 to 8 weeks from the date the technical drawings are signed off. This includes timber sourcing, panel matching, and dry-assembly in our workshop. On-site installation generally takes between 3 to 10 working days depending on complexity.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="svc-faq-item">
+                        <button class="svc-faq-q" type="button" aria-expanded="false" id="faq-q-3">
+                            <span class="svc-faq-q-text">Do you coordinate with architects and interior designers?</span>
+                            <div class="svc-faq-toggle">
+                                <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>
+                            </div>
+                        </button>
+                        <div class="svc-faq-ans-wrap" aria-labelledby="faq-q-3">
+                            <div class="svc-faq-ans-inner">
+                                <p class="svc-faq-ans">Yes. We regularly translate spatial briefs and CAD files from architectural firms into constructible workshop details. We coordinate with main site contractors to ensure plumbing and electrical points are aligned before joinery is delivered.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="svc-faq-item">
+                        <button class="svc-faq-q" type="button" aria-expanded="false" id="faq-q-4">
+                            <span class="svc-faq-q-text">How do you seal timber surfaces against moisture?</span>
+                            <div class="svc-faq-toggle">
+                                <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>
+                            </div>
+                        </button>
+                        <div class="svc-faq-ans-wrap" aria-labelledby="faq-q-4">
+                            <div class="svc-faq-ans-inner">
+                                <p class="svc-faq-ans">For high-humidity areas like kitchens and bathrooms, we seal solid wood and veneers with specialized marine-grade polyurethane oils or low-sheen acid-catalyzed lacquers. This provides deep fiber protection without masking the wood's organic texture.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- //CTA Section// -->
+    <section class="svc-cta" id="ctaSection">
+        <div class="svc-cta-bg"></div>
+        <div class="svc-cta-overlay"></div>
+        <div class="svc-cta-inner">
+            <div class="svc-cta-text sv-reveal-left">
+                <span class="svc-section-eyebrow">Collaborate</span>
+                <h2 class="svc-section-title">Begin Your<br>Custom <em>Project</em></h2>
+                <p class="svc-cta-desc">Whether you have detailed architectural blueprints ready or need to consult on spatial design concepts, our master craftsmen are ready to bring your ideas to life.</p>
+            </div>
+
+            <div class="svc-cta-card sv-reveal-right">
+                <span class="svc-cta-card-title">Workshop Contacts</span>
+                <div class="svc-cta-contacts">
+                    <div class="svc-cta-contact-item">
+                        <div class="svc-cta-contact-icon">
+                            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div class="svc-cta-contact-body">
+                            <span class="svc-cta-contact-label">Direct Email</span>
+                            <a class="svc-cta-contact-val" href="mailto:brandon@schrodersjoinery.co.za">brandon@schrodersjoinery.co.za</a>
+                        </div>
+                    </div>
+                    <div class="svc-cta-contact-item">
+                        <div class="svc-cta-contact-icon">
+                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div class="svc-cta-contact-body">
+                            <span class="svc-cta-contact-label">Workshop Phone</span>
+                            <a class="svc-cta-contact-val" href="tel:+27117944136">+27 (0) 11 794 4136</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="svc-cta-btns">
+                    <a class="svc-btn-primary" href="mailto:brandon@schrodersjoinery.co.za">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        Email Our Team
+                    </a>
+                    <a class="svc-btn-ghost" href="tel:+27117944136">
+                        Call the Workshop
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- //Site Footer (matches index.html exact markup)// -->
+    <footer class="site-footer" id="contactSection" aria-label="Schroder's Joinery contact footer">
+        <div class="footer-rail"></div>
+
+        <div class="footer-shell">
+            <div class="footer-topline"></div>
+
+            <div class="footer-main">
+                <section class="footer-brand footer-reveal" style="--fdelay: 0.06s" aria-label="Schroder's Joinery footer brand">
+                    <a class="footer-mark" href="#heroSection" aria-label="Return to top">
+                        <img src="sj-logo.png" alt="Schroder's Joinery logo">
+                    </a>
+                    <h2>Schr&ouml;der's<br>Joinery</h2>
+                    <p class="footer-brand-copy">
+                        Owner operated custom kitchens, cabinetry and bespoke furniture, crafted in Johannesburg with precision, restraint and intent.
+                    </p>
+                    <img src="tri-logo.png" alt="Schröder's Joinery Badge" class="footer-secondary-mark">
+                    <a class="footer-coordinate" href="https://www.google.com/maps/search/?api=1&amp;query=-26.0734,27.9216" target="_blank" rel="noopener">
+                        -26.0734 / 27.9216
+                    </a>
+                </section>
+
+                <section class="footer-ledger" aria-label="Schroder's Joinery contact details">
+                    <div class="footer-location-card footer-reveal" style="--fdelay: 0.18s">
+                        <span class="footer-kicker">Our Location</span>
+                        <p class="footer-address">
+                            5-Star Business Park<br>
+                            Juice Street<br>
+                            <span>Honeydew, Roodepoort, 2169<br>Johannesburg, South Africa</span>
+                        </p>
+                        <a class="footer-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=-26.0734,27.9216" target="_blank" rel="noopener">
+                            Open Location
+                        </a>
+                        <br>
+                        <a class="footer-phone" href="tel:+27117944136">011 794 4136</a>
+                    </div>
+
+                    <div class="footer-team footer-reveal" style="--fdelay: 0.30s">
+                        <div class="footer-team-title">
+                            <h3>Our Team<br>Cares</h3>
+                            <span>Direct Line</span>
+                        </div>
+
+                        <div class="footer-people">
+                            <div class="footer-person footer-reveal" style="--fdelay: 0.40s">
+                                <span class="footer-person-name">Brandon Zabielski <small>Owner</small></span>
+                                <a href="mailto:brandon@schrodersjoinery.co.za">brandon@schrodersjoinery.co.za</a>
+                            </div>
+                            <div class="footer-person footer-reveal" style="--fdelay: 0.48s">
+                                <span class="footer-person-name">Maria Spies <small>Team</small></span>
+                                <a href="mailto:maria@schrodersjoinery.co.za">maria@schrodersjoinery.co.za</a>
+                            </div>
+                            <div class="footer-person footer-reveal" style="--fdelay: 0.56s">
+                                <span class="footer-person-name">Graham Schr&ouml;der <small>Team</small></span>
+                                <a href="mailto:graham@schrodersjoinery.co.za">graham@schrodersjoinery.co.za</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="footer-bottom footer-reveal" style="--fdelay: 0.66s">
+                <span class="footer-copyright">&copy; <span id="footerYear">2026</span> Schr&ouml;der's Joinery. Crafted with intent.</span>
+                <span class="footer-credit">Site Crafted by: <a href="https://www.muttley.co.za" target="_blank" rel="noopener">Muttley Industries</a></span>
+                <nav class="footer-mini-nav" aria-label="Footer navigation">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#storySection">Our Story</a>
+                    <a href="index.html#svcSection">Services</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    </div> <!-- //End of pg-content-wrap// -->
+
+    <!-- //Back To Top Button// -->
+    <button class="svc-btt" id="bttBtn" type="button" aria-label="Scroll back to top">
+        <svg viewBox="0 0 24 24">
+            <polyline points="18 15 12 9 6 15"/>
+        </svg>
+    </button>
+
+    <!-- ==============================
+         INTERACTIVE SCRIPTS
+    ============================== -->
+    <script>
+        (function () {
+            // //Global Page Initializations
+            const yearEl = document.getElementById('footerYear');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+            // //Cursor Glow tracker
+            const glowEl = document.getElementById('cursorGlow');
+            if (glowEl) {
+                window.addEventListener('mousemove', (e) => {
+                    glowEl.style.left = e.clientX + 'px';
+                    glowEl.style.top = e.clientY + 'px';
+                }, { passive: true });
+            }
+
+            // //Page Hero Particle Dust generator (matches index.html style)
+            const dustContainer = document.getElementById('heroDust');
+            if (dustContainer) {
+                const DUST_COUNT = 15;
+                for (let i = 0; i < DUST_COUNT; i++) {
+                    const p = document.createElement('div');
+                    p.className = 'ph-dust-p';
+                    const size = Math.random() * 2.2 + 0.6;
+                    const left = Math.random() * 100;
+                    const delay = Math.random() * 12;
+                    const dur = Math.random() * 14 + 10;
+                    const drift = (Math.random() - 0.5) * 80;
+                    p.style.cssText = `
+                        width: ${size}px;
+                        height: ${size}px;
+                        left: ${left}%;
+                        bottom: -5%;
+                        opacity: 0;
+                        animation-duration: ${dur}s;
+                        animation-delay: ${delay}s;
+                        --drift: ${drift}px;
+                    `;
+                    dustContainer.appendChild(p);
+                }
+            }
+
+            // //Sticky Logo Button Scroll visibility
+            const stickyLogo = document.getElementById('stickyLogo');
+            const heroSection = document.getElementById('heroSection');
+            if (stickyLogo && heroSection) {
+                const updateLogo = () => {
+                    const scrolled = window.scrollY;
+                    const threshold = heroSection.offsetHeight * 0.70;
+                    if (scrolled > threshold) {
+                        stickyLogo.classList.add('visible');
+                    } else {
+                        stickyLogo.classList.remove('visible');
+                    }
+                };
+                window.addEventListener('scroll', updateLogo, { passive: true });
+                updateLogo();
+            }
+
+            // //Back To Top Button
+            const btt = document.getElementById('bttBtn');
+            if (btt) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > window.innerHeight * 0.5) {
+                        btt.classList.add('visible');
+                    } else {
+                        btt.classList.remove('visible');
+                    }
+                }, { passive: true });
+                btt.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // //Mobile Hamburg Navigation panel (matches index.html exact logic)
+            const mobileToggle = document.getElementById('heroMobileToggle');
+            const mobileNav = document.getElementById('heroMobileNav');
+            const mobileNavBackdrop = mobileNav ? mobileNav.querySelector('[data-mobile-nav-close]') : null;
+            const mobileNavLinks = mobileNav ? mobileNav.querySelectorAll('.hero-mobile-link') : [];
+            let mobileNavTimer = null;
+
+            function openMobileNav() {
+                if (!mobileToggle || !mobileNav) return;
+                clearTimeout(mobileNavTimer);
+                mobileNav.hidden = false;
+                mobileToggle.setAttribute('aria-expanded', 'true');
+                mobileToggle.setAttribute('aria-label', 'Close site navigation');
+                document.body.style.overflow = 'hidden';
+                requestAnimationFrame(() => {
+                    mobileNav.classList.add('is-open');
+                });
+            }
+
+            function closeMobileNav() {
+                if (!mobileToggle || !mobileNav) return;
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                mobileToggle.setAttribute('aria-label', 'Open site navigation');
+                document.body.style.overflow = '';
+                mobileNav.classList.remove('is-open');
+                clearTimeout(mobileNavTimer);
+                mobileNavTimer = setTimeout(() => {
+                    mobileNav.hidden = true;
+                }, 360);
+            }
+
+            if (mobileToggle && mobileNav) {
+                mobileToggle.addEventListener('click', () => {
+                    const isOpen = mobileToggle.getAttribute('aria-expanded') === 'true';
+                    if (isOpen) {
+                        closeMobileNav();
+                    } else {
+                        openMobileNav();
+                    }
+                });
+
+                if (mobileNavBackdrop) {
+                    mobileNavBackdrop.addEventListener('click', closeMobileNav);
+                }
+
+                mobileNavLinks.forEach(link => {
+                    link.addEventListener('click', closeMobileNav);
+                });
+
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && mobileToggle.getAttribute('aria-expanded') === 'true') {
+                        closeMobileNav();
+                    }
+                });
+
+                window.addEventListener('resize', () => {
+                    if (window.innerWidth > 700 && mobileToggle.getAttribute('aria-expanded') === 'true') {
+                        closeMobileNav();
+                    }
+                });
+            }
+
+            // //Scroll-reveal intersections for high-end text transitions
+            const revealTargets = document.querySelectorAll('.sv-reveal, .sv-reveal-left, .sv-reveal-right, .svc-gold-rule, .site-footer');
+            if ('IntersectionObserver' in window && revealTargets.length > 0) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('vis');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    rootMargin: '0px 0px -10% 0px',
+                    threshold: 0.1
+                });
+                revealTargets.forEach(el => observer.observe(el));
+            } else {
+                // Fallback if no observer
+                revealTargets.forEach(el => el.classList.add('vis'));
+            }
+
+            // //Artisan Materials Panel Switcher
+            const matButtons = document.querySelectorAll('.svc-material-btn');
+            const matCards = document.querySelectorAll('.svc-material-card');
+            const matBgs = document.querySelectorAll('.svc-material-display-bg');
+            
+            matButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const selectedMat = btn.dataset.material;
+
+                    // Toggle Button State
+                    matButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    // Toggle Background State
+                    matBgs.forEach(bg => {
+                        bg.classList.remove('active');
+                        if (bg.classList.contains('mat-bg-' + selectedMat)) {
+                            bg.classList.add('active');
+                        }
+                    });
+
+                    // Toggle Card State
+                    matCards.forEach(card => {
+                        card.classList.remove('active');
+                        if (card.id === 'mat-' + selectedMat) {
+                            card.classList.add('active');
+                            // Triggers Janka fill bar load transition
+                            const fill = card.querySelector('.svc-janka-fill');
+                            if (fill) {
+                                const initialWidth = fill.style.width;
+                                fill.style.width = '0';
+                                requestAnimationFrame(() => {
+                                    fill.style.width = initialWidth;
+                                });
+                            }
+                        }
+                    });
+                });
+            });
+
+            // //FAQ Accordion Toggles
+            const faqItems = document.querySelectorAll('.svc-faq-item');
+            faqItems.forEach(item => {
+                const trigger = item.querySelector('.svc-faq-q');
+                trigger.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('open');
+                    
+                    // Close all
+                    faqItems.forEach(i => {
+                        i.classList.remove('open');
+                        i.querySelector('.svc-faq-q').setAttribute('aria-expanded', 'false');
+                    });
+
+                    // Toggle current
+                    if (!isOpen) {
+                        item.classList.add('open');
+                        trigger.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // //Trigger Janka progress load on the initial active item
+            setTimeout(() => {
+                const activeFill = document.querySelector('.svc-material-card.active .svc-janka-fill');
+                if (activeFill) {
+                    const initW = activeFill.style.width;
+                    activeFill.style.width = '0';
+                    requestAnimationFrame(() => {
+                        activeFill.style.width = initW;
+                    });
+                }
+            }, 600);
+
+        })();
+    </script>
+</body>
+
+</html>
