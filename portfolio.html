@@ -724,6 +724,9 @@
             color: var(--gold-lt);
             box-shadow: 0 4px 12px rgba(212, 175, 55, 0.12);
         }
+        .expand-btn-wrap {
+            display: none;
+        }
 
 
 
@@ -1126,16 +1129,16 @@
             .panel-header { flex-direction: column; align-items: flex-start; margin-bottom: 36px; }
 
             /* Mobile: 2-column simplified grid */
-            .layout-a .g-item,
-            .layout-b .g-item,
-            .layout-c .g-item { grid-column: auto; grid-row: auto; }
+            .gallery-grid .g-item { grid-column: auto !important; grid-row: auto !important; }
             .gallery-grid {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-auto-rows: 200px;
-                gap: 3px;
+                gap: 4px;
             }
-            .gallery-grid .g-item:first-child { grid-column: 1 / 3; grid-row: 1 / 3; }
+            .gallery-grid .g-item:first-child { grid-column: 1 / 3 !important; grid-row: 1 / 3 !important; }
+            .g-item.mobile-collapsed { display: none !important; }
+            .expand-btn-wrap { display: flex; justify-content: center; margin-top: 36px; margin-bottom: 12px; }
 
             .pf-hero-copy { padding: 0 24px 80px 24px; }
             .disc-btn-label { font-size: 7.5px; letter-spacing: 0.28em; }
@@ -1823,8 +1826,13 @@ toggle.getAttribute('aria-expanded') === 'true' ? close() : open();
                             }
                         });
                         
-                        // Stagger entrance transitions for filtered items
-                        const visibleItems = Array.from(grid.querySelectorAll('.g-item:not(.hidden)'));
+                        // Update mobile collapse visibility based on filters
+                        if (typeof window.updateMobileVisibility === 'function') {
+                            window.updateMobileVisibility(grid);
+                        }
+
+                        // Stagger entrance transitions for visible items (excluding collapsed)
+                        const visibleItems = Array.from(grid.querySelectorAll('.g-item:not(.hidden):not(.mobile-collapsed)'));
                         visibleItems.forEach(item => {
                             item.classList.remove('vis');
                             item.style.transitionDelay = '';
@@ -1842,6 +1850,70 @@ toggle.getAttribute('aria-expanded') === 'true' ? close() : open();
                     });
                 });
             }
+
+            // Mobile visibility and expand button control logic
+            window.updateMobileVisibility = function(grid) {
+                const isMobile = window.innerWidth <= 700;
+                const isExpanded = grid.classList.contains('expanded');
+                const items = Array.from(grid.querySelectorAll('.g-item'));
+                const visibleItems = items.filter(item => !item.classList.contains('hidden'));
+                
+                let wrap = grid.parentNode.querySelector('.expand-btn-wrap');
+                
+                if (isMobile && !isExpanded && visibleItems.length > 9) {
+                    visibleItems.forEach((item, idx) => {
+                        if (idx >= 9) {
+                            item.classList.add('mobile-collapsed');
+                        } else {
+                            item.classList.remove('mobile-collapsed');
+                        }
+                    });
+                    if (wrap) {
+                        wrap.style.display = 'flex';
+                    }
+                } else {
+                    visibleItems.forEach(item => item.classList.remove('mobile-collapsed'));
+                    if (wrap) {
+                        wrap.style.display = 'none';
+                    }
+                }
+            };
+
+            function initMobileExpandButtons() {
+                const grids = document.querySelectorAll('.gallery-grid');
+                grids.forEach(grid => {
+                    const parent = grid.parentNode;
+                    const wrap = document.createElement('div');
+                    wrap.className = 'expand-btn-wrap';
+                    
+                    const btn = document.createElement('button');
+                    btn.className = 'filter-btn expand-grid-btn';
+                    
+                    const titleEl = parent.querySelector('.panel-title');
+                    const titleText = titleEl ? titleEl.textContent : 'Images';
+                    btn.textContent = `View All ${titleText}`;
+                    
+                    btn.addEventListener('click', () => {
+                        grid.classList.add('expanded');
+                        window.updateMobileVisibility(grid);
+                    });
+                    
+                    wrap.appendChild(btn);
+                    parent.appendChild(wrap);
+                    
+                    window.updateMobileVisibility(grid);
+                });
+            }
+
+            // Run expansion initialisation after data render
+            setTimeout(initMobileExpandButtons, 120);
+
+            window.addEventListener('resize', () => {
+                const grids = document.querySelectorAll('.gallery-grid');
+                grids.forEach(grid => {
+                    window.updateMobileVisibility(grid);
+                });
+            });
 
             setupFiltering('filter-kitchens', 'grid-kitchens');
             setupFiltering('filter-interiors', 'grid-interiors');
@@ -1882,8 +1954,14 @@ toggle.getAttribute('aria-expanded') === 'true' ? close() : open();
                     requestAnimationFrame(() => requestAnimationFrame(() => filterBar.classList.add('vis')));
                 }
 
+                // Stagger update for mobile pagination visibility
+                const grid = target.querySelector('.gallery-grid');
+                if (grid && typeof window.updateMobileVisibility === 'function') {
+                    window.updateMobileVisibility(grid);
+                }
+
                 /* Trigger gallery items reveal for only the visible items */
-                const items = target.querySelectorAll('.g-item:not(.hidden)');
+                const items = target.querySelectorAll('.g-item:not(.hidden):not(.mobile-collapsed)');
                 items.forEach(item => {
                     item.classList.remove('vis');
                     item.style.transitionDelay = '';
