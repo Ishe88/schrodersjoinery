@@ -332,6 +332,9 @@
             from { opacity:0; transform: translateX(-50%) translateY(-24px) scale(0.88); }
             to { opacity:1; transform: translateX(-50%) translateY(0) scale(1); }
         }
+        .pf-hero-logo-wrap a {
+            display: block;
+        }
         .pf-hero-logo { height: 90px; width: auto; object-fit: contain; display: block; }
         .pf-hero-logo-rule {
             width: 1px; height: 28px;
@@ -1247,7 +1250,9 @@
 
         <!-- Logo centred top -->
         <div class="pf-hero-logo-wrap">
-            <img src="sj-logo.png" alt="Schröder's Joinery" class="pf-hero-logo">
+            <a href="index.html" aria-label="Return to Home">
+                <img src="sj-logo.png" alt="Schröder's Joinery" class="pf-hero-logo">
+            </a>
             <div class="pf-hero-logo-rule"></div>
         </div>
 
@@ -2003,6 +2008,39 @@ toggle.getAttribute('aria-expanded') === 'true' ? close() : open();
                 if (e.key === 'ArrowLeft') showImage((currentIdx - 1 + currentItems.length) % currentItems.length);
                 if (e.key === 'ArrowRight') showImage((currentIdx + 1) % currentItems.length);
             });
+
+            /* Touch swipe support */
+            let touchStartX = 0;
+            let touchStartY = 0;
+
+            lb.addEventListener('touchstart', (e) => {
+                if (e.touches.length === 1) {
+                    touchStartX = e.touches[0].clientX;
+                    touchStartY = e.touches[0].clientY;
+                }
+            }, { passive: true });
+
+            lb.addEventListener('touchend', (e) => {
+                if (e.changedTouches.length === 1) {
+                    const touchEndX = e.changedTouches[0].clientX;
+                    const touchEndY = e.changedTouches[0].clientY;
+                    
+                    const minSwipeDistance = 50; // pixels
+                    const maxSwipeDiagonal = 100; // pixels
+                    const diffX = touchEndX - touchStartX;
+                    const diffY = Math.abs(touchEndY - touchStartY);
+
+                    if (Math.abs(diffX) > minSwipeDistance && diffY < maxSwipeDiagonal) {
+                        if (diffX > 0) {
+                            // Swipe right -> Previous
+                            showImage((currentIdx - 1 + currentItems.length) % currentItems.length);
+                        } else {
+                            // Swipe left -> Next
+                            showImage((currentIdx + 1) % currentItems.length);
+                        }
+                    }
+                }
+            }, { passive: true });
 
             lbClose.addEventListener('click', closeLightbox);
             lb.addEventListener('click', (e) => { if (e.target === lb) closeLightbox(); });

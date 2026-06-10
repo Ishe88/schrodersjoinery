@@ -325,6 +325,9 @@
             }
         }
 
+        .hero-logo-wrap a {
+            display: block;
+        }
         .hero-logo {
             height: 90px;
             width: auto;
@@ -1797,6 +1800,13 @@
             padding: 15px;
         }
 
+        .center-tile .hex-inner a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
         .center-logo {
             width: 78%;
             max-width: 118px;
@@ -4297,7 +4307,9 @@
 
         <!-- //Logo centred top// -->
         <div class="hero-logo-wrap">
-            <img src="sj-logo.png" alt="Schröder's Joinery" class="hero-logo">
+            <a href="index.html" aria-label="Return to Home">
+                <img src="sj-logo.png" alt="Schröder's Joinery" class="hero-logo">
+            </a>
             <div class="hero-logo-rule"></div>
         </div>
 
@@ -4541,7 +4553,7 @@
                         <div class="hex-shell"></div>
                         <div class="hex-inner">
                             <svg viewBox="0 0 24 24">
-                                <path d="M4 4h16v2H4zm2 3h2v9H6zm5 0h2v9h-2zm5 0h2v9h-2zM3 18h18v2H3z"/>
+                                <path d="M4 4h16v2H4zm2 3h2v9H6zm5 0h2v9h-2zm5 0h2v9h-2zM3 18h18v2H3z" />
                             </svg>
                             <p>Kitchens</p>
                         </div>
@@ -4552,10 +4564,10 @@
                         <div class="hex-shell"></div>
                         <div class="hex-inner">
                             <svg viewBox="0 0 24 24">
-                                <rect x="3" y="3" width="18" height="8" rx="1"/>
-                                <rect x="3" y="13" width="18" height="8" rx="1"/>
-                                <line x1="12" y1="7" x2="12" y2="7" stroke-linecap="round" stroke-width="2"/>
-                                <line x1="12" y1="17" x2="12" y2="17" stroke-linecap="round" stroke-width="2"/>
+                                <rect x="3" y="3" width="18" height="8" rx="1" />
+                                <rect x="3" y="13" width="18" height="8" rx="1" />
+                                <line x1="12" y1="7" x2="12" y2="7" stroke-linecap="round" stroke-width="2" />
+                                <line x1="12" y1="17" x2="12" y2="17" stroke-linecap="round" stroke-width="2" />
                             </svg>
                             <p>Cabinetry</p>
                         </div>
@@ -4566,10 +4578,10 @@
                         <div class="hex-shell"></div>
                         <div class="hex-inner">
                             <svg viewBox="0 0 24 24">
-                                <rect x="2" y="7" width="20" height="14" rx="1"/>
-                                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
-                                <line x1="12" y1="12" x2="12" y2="16"/>
-                                <line x1="10" y1="14" x2="14" y2="14"/>
+                                <rect x="2" y="7" width="20" height="14" rx="1" />
+                                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                                <line x1="12" y1="12" x2="12" y2="16" />
+                                <line x1="10" y1="14" x2="14" y2="14" />
                             </svg>
                             <p>Offices</p>
                         </div>
@@ -4579,7 +4591,9 @@
                     <div class="hex-unit h4 center-tile">
                         <div class="hex-shell"></div>
                         <div class="hex-inner">
-                            <img src="sj-logo.png" alt="Logo" class="center-logo">
+                            <a href="index.html" aria-label="Return to Home">
+                                <img src="sj-logo.png" alt="Logo" class="center-logo">
+                            </a>
                         </div>
                     </div>
 
@@ -4588,7 +4602,8 @@
                         <div class="hex-shell"></div>
                         <div class="hex-inner">
                             <svg viewBox="0 0 24 24">
-                                <path d="M4 10V7a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v3M2 10h20v4H2zm2 4v4m16-4v4M6 14v1m12-1v1"/>
+                                <path
+                                    d="M4 10V7a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v3M2 10h20v4H2zm2 4v4m16-4v4M6 14v1m12-1v1" />
                             </svg>
                             <p>Bespoke<br>Furniture</p>
                         </div>
@@ -4866,11 +4881,11 @@
             </div>
         </div>
     </footer>
- 
+
     <!-- //Back To Top Button// -->
     <button class="svc-btt" id="bttBtn" type="button" aria-label="Scroll back to top">
         <svg viewBox="0 0 24 24">
-            <polyline points="18 15 12 9 6 15"/>
+            <polyline points="18 15 12 9 6 15" />
         </svg>
     </button>
     <script>
