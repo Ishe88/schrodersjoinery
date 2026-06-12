@@ -111,7 +111,7 @@
                     if (folderName === 'cabinetry' && cfg.prefix === 'cab-' && numStr === '03') {
                         fileExt = 'png';
                     }
-                    const imgPath = `portfolio/${folderName}/${cfg.prefix}${numStr}.${fileExt}`;
+                    const imgPath = `portfolio-gallery/${folderName}/${cfg.prefix}${numStr}.${fileExt}`;
                     
                     const item = document.createElement('div');
                     item.className = `g-item ${gridSizes[globalIndex % gridSizes.length]}`;

@@ -1,3 +1,6 @@
+# Prioritize static index.html over WordPress index.php (prevents PHP crashes)
+DirectoryIndex index.html index.php
+
 # ----------------------------------------------------------------------
 # Schröder's Joinery - Apache Rewrite & Redirect Rules
 # ----------------------------------------------------------------------
