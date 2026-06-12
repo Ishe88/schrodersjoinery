@@ -9,28 +9,37 @@ RewriteCond %{HTTP_HOST} ^schrodersjoinery\.co\.za [NC]
 RewriteRule ^(.*)$ https://www.schrodersjoinery.co.za/$1 [R=301,L]
 
 # 2. Redirect index.html requests to root / (keeps URL bar clean)
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/ [NC]
 RewriteRule ^index\.html$ https://www.schrodersjoinery.co.za/ [R=301,L]
 
-# 3. Mappings for Consolidated WordPress Pages to Tab Anchors (R=301,NE,L)
-RewriteRule ^kitchens/?$ https://www.schrodersjoinery.co.za/portfolio.html#kitchens [R=301,NE,L]
-RewriteRule ^bedrooms/?$ https://www.schrodersjoinery.co.za/portfolio.html#cabinetry [R=301,NE,L]
-RewriteRule ^bespoke-furniture/?$ https://www.schrodersjoinery.co.za/portfolio.html#furniture [R=301,NE,L]
-RewriteRule ^bathrooms/?$ https://www.schrodersjoinery.co.za/portfolio.html#bathrooms [R=301,NE,L]
-RewriteRule ^interiors/?$ https://www.schrodersjoinery.co.za/portfolio.html#interiors [R=301,NE,L]
-RewriteRule ^offices/?$ https://www.schrodersjoinery.co.za/portfolio.html#offices [R=301,NE,L]
+# 3. Redirect direct requests for *.html to extensionless URLs
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/ [NC]
+RewriteRule ^([^.]+)\.html$ https://www.schrodersjoinery.co.za/$1 [R=301,L]
 
-# 4. Redirects for Core WordPress Pages to Static HTML Pages
-RewriteRule ^services/?$ https://www.schrodersjoinery.co.za/services.html [R=301,L]
-RewriteRule ^contact-us/?$ https://www.schrodersjoinery.co.za/contact.html [R=301,L]
-RewriteRule ^portfolio/?$ https://www.schrodersjoinery.co.za/portfolio.html [R=301,L]
-RewriteRule ^privacy-policy/?$ https://www.schrodersjoinery.co.za/privacy-policy.html [R=301,L]
+# 4. Internally map extensionless URLs to their HTML files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)$ $1.html [L]
 
-# 5. Redirects for WordPress Sections Merged to Homepage sections
+# 5. Mappings for Consolidated WordPress Pages to Tab Anchors
+RewriteRule ^kitchens/?$ https://www.schrodersjoinery.co.za/portfolio#kitchens [R=301,NE,L]
+RewriteRule ^bedrooms/?$ https://www.schrodersjoinery.co.za/portfolio#cabinetry [R=301,NE,L]
+RewriteRule ^bespoke-furniture/?$ https://www.schrodersjoinery.co.za/portfolio#furniture [R=301,NE,L]
+RewriteRule ^bathrooms/?$ https://www.schrodersjoinery.co.za/portfolio#bathrooms [R=301,NE,L]
+RewriteRule ^interiors/?$ https://www.schrodersjoinery.co.za/portfolio#interiors [R=301,NE,L]
+RewriteRule ^offices/?$ https://www.schrodersjoinery.co.za/portfolio#offices [R=301,NE,L]
+
+# 6. Redirects for Core WordPress Pages to Clean URLs
+RewriteRule ^services/?$ https://www.schrodersjoinery.co.za/services [R=301,L]
+RewriteRule ^contact-us/?$ https://www.schrodersjoinery.co.za/contact [R=301,L]
+RewriteRule ^portfolio/?$ https://www.schrodersjoinery.co.za/portfolio [R=301,L]
+RewriteRule ^privacy-policy/?$ https://www.schrodersjoinery.co.za/privacy-policy [R=301,L]
+
+# 7. Redirects for WordPress Sections Merged to Homepage sections
 RewriteRule ^our-story/?$ https://www.schrodersjoinery.co.za/#storySection [R=301,NE,L]
-RewriteRule ^materials/?$ https://www.schrodersjoinery.co.za/services.html#materialsSection [R=301,NE,L]
+RewriteRule ^materials/?$ https://www.schrodersjoinery.co.za/services#materialsSection [R=301,NE,L]
 
-# 6. Redirect old WordPress Sitemap Indexes to Static Sitemap
+# 8. Redirect old WordPress Sitemap Indexes to Static Sitemap
 Redirect 301 /sitemap_index.xml /sitemap.xml
 Redirect 301 /page-sitemap.xml /sitemap.xml
 Redirect 301 /post-sitemap.xml /sitemap.xml
