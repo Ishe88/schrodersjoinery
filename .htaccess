@@ -17,9 +17,9 @@ RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/ [NC]
 RewriteRule ^([^.]+)\.html$ https://www.schrodersjoinery.co.za/$1 [R=301,L]
 
 # 4. Internally map extensionless URLs to their HTML files
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^([^/]+)$ $1.html [L]
+# Prioritizes mapping to xxx.html even if a directory named xxx exists (like /portfolio)
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
 
 # 5. Mappings for Consolidated WordPress Pages to Tab Anchors
 RewriteRule ^kitchens/?$ https://www.schrodersjoinery.co.za/portfolio#kitchens [R=301,NE,L]
