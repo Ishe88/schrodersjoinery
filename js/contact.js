@@ -102,16 +102,56 @@
             }
 
             if (isValid) {
-                // Fade out form elements inside the form container
-                form.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-                form.style.opacity = '0';
-                form.style.transform = 'translateY(-10px)';
+                const submitBtn = form.querySelector('.form-submit-btn');
+                let originalBtnText = '';
+                if (submitBtn) {
+                    originalBtnText = submitBtn.innerHTML;
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = 'Sending...';
+                }
 
-                setTimeout(() => {
-                    form.style.display = 'none';
-                    successCard.classList.add('active');
-                    successCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }, 400);
+                fetch('send-email.php', {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.success) {
+                        // Fade out form elements inside the form container
+                        form.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                        form.style.opacity = '0';
+                        form.style.transform = 'translateY(-10px)';
+
+                        setTimeout(() => {
+                            form.style.display = 'none';
+                            successCard.classList.add('active');
+                            successCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                            if (submitBtn) {
+                                submitBtn.disabled = false;
+                                submitBtn.innerHTML = originalBtnText;
+                            }
+                        }, 400);
+                    } else {
+                        alert(data.error || 'An error occurred while sending your inquiry. Please try again.');
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = originalBtnText;
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error submitting form:', error);
+                    alert('A connection error occurred. Please verify your connection and try again.');
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnText;
+                    }
+                });
             }
         });
 
