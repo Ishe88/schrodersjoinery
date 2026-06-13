@@ -77,7 +77,7 @@
         ];
 
         const FURNITURE_CONFIG = [
-            { loc: '', label: '', count: 16, prefix: 'furn-', ext: 'jpeg' }
+            { loc: '', label: '', count: 36, prefix: 'furn-', ext: 'jpeg' }
         ];
 
         const BATHROOMS_CONFIG = [
@@ -110,6 +110,9 @@
                     let fileExt = cfg.ext;
                     if (folderName === 'cabinetry' && cfg.prefix === 'cab-' && numStr === '03') {
                         fileExt = 'png';
+                    }
+                    if (folderName === 'furniture' && num >= 17) {
+                        fileExt = 'jpg';
                     }
                     const imgPath = `portfolio-gallery/${folderName}/${cfg.prefix}${numStr}.${fileExt}`;
                     

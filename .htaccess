@@ -19,6 +19,10 @@ RewriteRule ^index\.html$ https://www.schrodersjoinery.co.za/ [R=301,L]
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/ [NC]
 RewriteRule ^([^.]+)\.html$ https://www.schrodersjoinery.co.za/$1 [R=301,L]
 
+# 3.5. Redirect URLs with a trailing slash to non-trailing slash (except directories)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ https://www.schrodersjoinery.co.za/$1 [R=301,L]
+
 # 4. Internally map extensionless URLs to their HTML files
 # Prioritizes mapping to xxx.html even if a directory named xxx exists (like /portfolio)
 RewriteCond %{DOCUMENT_ROOT}/$1.html -f
